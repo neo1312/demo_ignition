@@ -1,0 +1,95 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[default]Press_3/AGTC_FPA25_2"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 71,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ToggleSwitch"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.selected": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.TagPath}"
+                },
+                "tagPath": "{1}/Coordinate/Auto"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "text": "Enable Auto"
+          }
+        },
+        "type": "ia.input.toggle-switch"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "Pop_Auto",
+                "modal": false,
+                "overlayDismiss": false,
+                "position": {
+                  "relativeLocation": "bottom-right"
+                },
+                "positionType": "relative",
+                "resizable": true,
+                "showCloseIcon": false,
+                "title": "Enable Auto",
+                "type": "close",
+                "viewPath": "Popups/RB_RightClick_TC",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "text": "Close"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "base": {
+    "style": {
+      "borderStyle": "solid",
+      "borderTopLeftRadius": "7px",
+      "borderTopRightRadius": "7px",
+      "borderBottomLeftRadius": "7px",
+      "borderBottomRightRadius": "7px",
+      "marginRight": "15px",
+      "marginTop": "15px"
+    }
+  }
+}

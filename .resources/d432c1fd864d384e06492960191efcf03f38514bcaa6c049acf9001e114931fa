@@ -1,0 +1,1 @@
+EXEC dbo.UpdatePileLocation @serial = :serial, @sequence = :sequence, @pile = :pile, @location = :location, @pileSequence = :pileSequence

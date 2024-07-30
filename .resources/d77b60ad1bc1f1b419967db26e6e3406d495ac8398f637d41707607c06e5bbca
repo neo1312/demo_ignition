@@ -1,0 +1,508 @@
+<?xml version="1.0" ?>
+<sfc zoom="0.49999988" canvas="52 51" execution-mode="Callable" hot-editable="false" persist-state="true" redundant-sync="false">
+	<onstart>def onStart(chart): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	chart['state'] = chart.state
+	SFCMonitor.insert_data(chart)</onstart>
+	<onstop>def onStop(chart): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	chart['state'] = chart.state
+	SFCMonitor.insert_data(chart)</onstop>
+	<oncancel>def onCancel(chart): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	chart['state'] = chart.state
+	SFCMonitor.insert_data(chart)
+	Functions.reset_TC_tags(chart.tc_path)</oncancel>
+	<onabort>def onAbort(chart): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	chart['state'] = chart.state
+	SFCMonitor.insert_data(chart)
+	#Create a logger. Use the path of the chart so each chart will use separate loggers
+	logger = system.util.getLogger("SFC_Infeed_TC_Move_Logger")
+	#Invoke the logger. Use chart.abortCause to report the issue
+	logger.error("Chart Aborted. Reason: %s" % (chart.abortCause))</onabort>
+	<step id="e1ba1c35-fd1c-4aa7-a8dc-c0fa73bcb067" location="5 0" name="__begin" factory-id="begin-step">
+<parameters>
+	<parameter><name>sourcepath</name><expression>'test'</expression></parameter>
+	<parameter><name>destinationpath</name><expression>'test'</expression></parameter>
+	<parameter><name>tc_path</name><expression>'[default]PressOF_TransferCart/TC_AGTC'</expression></parameter>
+	<parameter><name>Pos_error</name><expression>10</expression></parameter>
+	<parameter><name>source_auto_state</name><expression>0</expression></parameter>
+	<parameter><name>dest_auto_state</name><expression>0</expression></parameter>
+	<parameter><name>is_populated</name><expression>true
+</expression></parameter>
+	<parameter><name>movement_ready</name><expression>0</expression></parameter>
+	<parameter><name>park_loc</name><expression>0</expression></parameter>
+</parameters>
+	</step>
+	<step id="e86716a8-079f-415f-952a-be96900738bb" location="11 9" name="S1" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	try:
+		Functions.transfer_array_data(chart.sourcepath,chart.tc_path,50)
+		chart['state'] = chart.state
+		SFCMonitor.insert_data(chart)
+	except Exception as e:
+		logger = system.util.getLogger("SFC_IN_S1_Logger")
+		#Invoke the logger. Use chart.abortCause to report the issue
+		step = Functions.get_step_name('OUTFEED_TC_MOVE')
+		logger.error("Chart Errors Reason: %s" % (e))
+		Functions.sfc_add_log(e,step)</start-script>
+	</step>
+	<step id="ccc251b5-04e9-4747-b161-b2a81b2faf73" location="11 25" name="S2" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	#import time
+	#task1
+	path = chart.sourcepath + '/TransComm/InSourcePos_SMTOPLC'
+	curValue = system.tag.read(path)
+	newValue = system.tag.read(chart.tc_path + '/TransComm/InSourcePos_PLCTOSM').value
+	if curValue != newValue:
+		system.tag.write(path, newValue)
+	#task2
+	path = chart.tc_path  + '/TransComm/InSourcePos_SMTOPLC'
+	curValue=system.tag.read(path)
+	newValue = system.tag.read(chart.sourcepath + '/TransComm/InSourcePos_PLCTOSM').value
+	if curValue != newValue:
+		system.tag.write(path, newValue)
+	#task3
+	path = chart.sourcepath + '/TransComm/SourceRollRun_SMTOPLC'
+	curValue=system.tag.read(path)
+	newValue=system.tag.read(chart.tc_path + '/TransComm/SourceRollRun_PLCTOSM').value
+	if curValue != newValue:
+		system.tag.write(path, newValue)
+	#task4
+	path = chart.tc_path + '/TransComm/SourceRollRun_SMTOPLC'
+	curValue=system.tag.read(path)
+	newValue = system.tag.read(chart.sourcepath + '/TransComm/SourceRollRun_PLCTOSM').value
+	if curValue != newValue:
+		system.tag.write(path, newValue)	
+	#time.sleep(0.25)</start-script>
+	</step>
+	<step id="c2634a8c-b7b3-4391-8a4e-61f24ee29831" location="13 36" name="S3" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	try:
+		Functions.reset_source(chart.sourcepath)
+	except Exception as e:
+		logger = system.util.getLogger("SFC_IN_S3_Logger")
+		#Invoke the logger. Use chart.abortCause to report the issue
+		step = Functions.get_step_name('OUTFEED_TC_MOVE')
+		logger.error("Chart Errors Reason: %s" % (e))
+		Functions.sfc_add_log(e, step)</start-script>
+	</step>
+	<step id="433faa11-f629-4542-b804-77475b700583" location="37 10" name="S5" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	try:
+		Functions.transfer_array_data(chart.tc_path,chart.destinationpath,50)
+	except Exception as e:
+		logger = system.util.getLogger("SFC_IN_S5_Logger")
+		#Invoke the logger. Use chart.abortCause to report the issue
+		step = Functions.get_step_name('OUTFEED_TC_MOVE')
+		logger.error("Chart Errors Reason: %s" % (e))
+		Functions.sfc_add_log(e, step)</start-script>
+	</step>
+	<step id="abe88f94-67b0-4b00-9162-9d9fc58cda94" location="37 13" name="S6" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	try:
+		chart.is_populated=Functions.is_populated(chart.destinationpath)
+		if chart.is_populated == True:
+			chart.is_populated = True
+		elif chart.is_populated == False:
+			chart.is_populated = True
+			logger = system.util.getLogger("Populated_NOT_working")
+			logger.error("Chart Errors Reason")
+	except Exception as e:
+		logger = system.util.getLogger("SFC_IN_S6_Logger")
+		#Invoke the logger. Use chart.abortCause to report the issue
+		step = Functions.get_step_name('OUTFEED_TC_MOVE')
+		logger.error("Chart Errors Reason: %s" % (e))
+		Functions.sfc_add_log(e, step)</start-script>
+	</step>
+	<step id="9c1f5a43-e6d3-459e-ae15-1d6caea3ee6c" location="25 33" name="S4" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	try:
+		Functions.write_array_zero(1,50,chart.tc_path)
+	except Exception as e:
+		logger = system.util.getLogger("SFC_IN_S4_Logger")
+		#Invoke the logger. Use chart.abortCause to report the issue
+		step = Functions.get_step_name('OUTFEED_TC_MOVE')
+		logger.error("Chart Errors Reason: %s" % (e))
+		Functions.sfc_add_log(e, step)</start-script>
+	</step>
+	<step id="afee9c8f-d33e-4108-8e66-9dcc40f3b963" location="37 19" name="S7" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	try:
+		Functions.clean_array_1(chart.destinationpath,50)
+	except Exception as e:
+		logger = system.util.getLogger("SFC_IN_S7_Logger")
+		#Invoke the logger. Use chart.abortCause to report the issue
+		step=Functions.get_step_name('OUTFEED_TC_MOVE')
+		logger.error("Chart Errors Reason: %s" % (e))
+		Functions.sfc_add_log(e,step)</start-script>
+	</step>
+	<step id="420f268a-796d-43b8-b082-5f3f87de1818" location="37 27" name="S8" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	#import time
+	#task1
+	path =  chart.destinationpath + '/TransComm/InDestPos_SMTOPLC'
+	curValue = system.tag.read(path)
+	newValue = system.tag.read(chart.tc_path + '/TransComm/InDestPos_PLCTOSM')
+	if curValue != newValue:
+		system.tag.write(path, newValue)
+	#task2
+	path = chart.tc_path  + '/TransComm/InDestPos_SMTOPLC'
+	curValue = system.tag.read(path)
+	newValue = system.tag.read(chart.destinationpath + '/TransComm/InDestPos_PLCTOSM')
+	if curValue != newValue:
+		system.tag.write(path, newValue)
+	#task3
+	path = chart.destinationpath + '/TransComm/DestRollRun_SMTOPLC'
+	curValue = system.tag.read(path)
+	newValue = system.tag.read(chart.tc_path + '/TransComm/DestRollRun_PLCTOSM').value
+	if curValue != newValue:
+		system.tag.write(path, newValue)
+	#task4
+	path = chart.tc_path + '/TransComm/DestRollRun_SMTOPLC'
+	curValue = system.tag.read(path)
+	newValue = system.tag.read(chart.destinationpath + '/TransComm/DestRollRun_PLCTOSM').value
+	if curValue != newValue:
+		system.tag.write(path, newValue)
+	#time.sleep(0.25)</start-script>
+	</step>
+	<step id="70428ac6-cc06-4a0c-8da3-8ca113a97bf7" location="38 37" name="S9" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	try:	
+		Functions.reset_dest(chart.destinationpath)
+	except Exception as e:
+		logger = system.util.getLogger("SFC_IN_S9_Logger")
+		#Invoke the logger. Use chart.abortCause to report the issue
+		step = Functions.get_step_name('OUTFEED_TC_MOVE')
+		logger.error("Chart Errors Reason: %s" % (e))
+		Functions.sfc_add_log(e, step)</start-script>
+	</step>
+	<step id="06fa0ec7-3ca0-471f-8198-2906bc724e22" location="38 41" name="S10" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	try:
+		Functions.reset_TC_tags(chart.tc_path)
+	except Exception as e:
+		logger = system.util.getLogger("SFC_IN_10_Logger")
+		#Invoke the logger. Use chart.abortCause to report the issue
+		step = Functions.get_step_name('OUTFEED_TC_MOVE')
+		logger.error("Chart Errors Reason: %s" % (e))
+		Functions.sfc_add_log(e, step)</start-script>
+	</step>
+	<step id="3841f700-52e7-4f95-8217-ae9b14904ad2" location="38 43" name="__end1" factory-id="end-step">	</step>
+	<transition id="167c1cb5-3869-4114-b534-e793b0664b31" location="3 3">{source_auto_state} = 0</transition>
+	<transition id="ddc56080-95c5-4990-ad92-71fc7db589be" location="8 3">{source_auto_state}=1</transition>
+	<transition id="ed7e4e4e-a7ed-4314-8d26-1f3657b1c211" location="11 6">tag({tc_path} + '/TransComm/InSourcePos_PLCTOSM')</transition>
+	<transition id="9f9c6292-0f0d-4d80-bc8e-b32fc3771d6a" location="0 16">tag({tc_path} + '/TransComm/ActualPosition_PLCTOSM') &gt;= tag({sourcepath} + '/Coordinate/X_Location') - {Pos_error} 
+</transition>
+	<transition id="ca079388-fba3-4eee-b125-3d591cee1067" location="11 15">tag({tc_path} + '/Door/Door_0/PileNumber') != ''
+
+
+</transition>
+	<transition id="db979e68-93a9-4f2e-a9c6-1074a639efc4" location="0 21">tag({tc_path} + '/TransComm/ActualPosition_PLCTOSM') &lt;= tag({sourcepath} + '/Coordinate/X_Location') + {Pos_error}</transition>
+	<transition id="f254b602-d811-4617-9a1e-d6185d67abdc" location="28 2">{dest_auto_state}=0</transition>
+	<transition id="b76fb626-93bf-4f2a-86b2-a48c4cfd5fc6" location="0 29">tag({tc_path} + '/LocOccupied_PLCTOSM')=1</transition>
+	<transition id="d198ff85-17e9-4b14-9131-79a609810061" location="25 17">tag({tc_path} + '/TransComm/ActualPosition_PLCTOSM') &gt;= tag({destinationpath} + '/Coordinate/X_Location') - {Pos_error}</transition>
+	<transition id="73b84a7b-f599-4f34-a1ed-97fecb4aa9e7" location="25 20">tag({tc_path} + '/TransComm/ActualPosition_PLCTOSM') &lt;= tag({destinationpath} + '/Coordinate/X_Location') + {Pos_error}
+</transition>
+	<transition id="f7c68411-222e-47fc-9ca2-8b95c970949c" location="11 32">tag({tc_path} + '/LocOccupied_PLCTOSM') = 0</transition>
+	<transition id="014ac401-b687-492e-972a-944744e1f785" location="34 2">{dest_auto_state}</transition>
+	<transition id="f7187b06-7f8f-476d-ba72-5ac9f1c38cc8" location="34 4">tag({tc_path} + '/TransComm/InDestPos_PLCTOSM')</transition>
+	<transition id="a2ab94fc-d013-4887-a1d3-7aea1a2ae145" location="13 32">tag({tc_path} + '/LocOccupied_PLCTOSM') = 1 </transition>
+	<transition id="29dbb2a4-0f2c-44ae-8bd3-c4527340702c" location="34 7">{source_auto_state} = 0</transition>
+	<transition id="c0a7ad53-ca79-43fd-aacd-a38e3ffb1b8b" location="37 7">{source_auto_state}=1</transition>
+	<transition id="78ce094f-314a-4d96-8e30-fd6528373dbf" location="25 29">tag({tc_path} + '/LocOccupied_PLCTOSM') = 0</transition>
+	<transition id="c71f63a6-ede3-4a7a-9fb2-c376bef3eac3" location="37 16">{is_populated}</transition>
+	<transition id="3d76926d-ea07-4cdc-9ab5-617f5b35ebd8" location="37 35">tag({destinationpath} + '/LocOccupied_PLCTOSM') = 0</transition>
+	<transition id="4aa47f94-3414-4ff4-8617-fe0fb8fb676e" location="38 35">tag({destinationpath} + '/LocOccupied_PLCTOSM') = 1
+</transition>
+	<jump id="901b04f1-ef6f-4ec8-af46-33af19ccf9b0" location="13 38">C</jump>
+	<anchor id="8b750989-befd-44bf-98c0-02cee08fd46a" location="31 0">C</anchor>
+	<note id="66598ffd-6a67-48a7-ac9a-c7032f348451" location="9 0" size="9 2">SFC Called from Gateway timer script
+Source and Destination paths are passed in from timer script</note>
+	<note id="a346479d-d2d8-4fbe-ac5a-d88ac2654862" location="9 3" size="9 2">If TC/Source_is_autoSMTOPLC  = 0, Manual 
+If TC/Source_is_autoSMTOPLC  = 1, Auto
+</note>
+	<note id="17ebf780-ce7a-45e4-86fb-9721138a4550" location="12 6" size="11 1">TransferCart/TransComm/InSourcePos_PLCTOSM = 1</note>
+	<note id="9620922f-ea1b-43e6-8179-a1ff4c6f2ced" location="12 9" size="11 1">S1: Transfer Doors array in source pile to Transfer Cart</note>
+	<note id="b9bb6b65-4325-4b1a-b848-c8d57a52eb64" location="1 16" size="9 2">Check if {tc_path} + '/TransComm/ActualPosition_PLCTOSM is in 
+left side interval   </note>
+	<note id="ef45eb0a-6896-4068-a3a5-0236cf5ec4ce" location="12 14" size="11 2">Check pilenumber on first door of transfer cart to make
+sure its populated</note>
+	<note id="67bb5856-0307-4a3b-8321-aa3b10bd5948" location="1 20" size="9 2">Check if  {tc_path} + '/TransComm/ActualPosition_PLCTOSM_SMTOPLC is in 
+right side interval   </note>
+	<note id="82adb17b-7175-4d87-8be5-79eecb822645" location="13 19" size="10 2">S2 Task 1 - Set Value of Source/TransComm/InSourcePos_PLCTOSM
+== Value of TC/TransComm/InSourcePos_PLCTOSM</note>
+	<note id="1352eadc-97d3-4a1c-af6d-9a96597204ce" location="13 21" size="10 2">S2 Task 2 - Set Value of TC/TransComm/InSourcePos_SMTOPLC 
+== Value of Source/TransComm/InSourcePos_PLCTOSM</note>
+	<note id="7f6e15b6-3fd0-4f15-ab36-21fa73dce232" location="13 23" size="10 2">S2 Task 3 - Set Value of Source/TransComm/SourceRollRun_SMTOPLC 
+== Value of TC/TransComm/SourceRollRun_PLCTOSM</note>
+	<note id="00e6dc78-d039-43ec-b591-7027069a982b" location="1 28" size="9 2">If TC/LocOccupied_PLCTOSM = 0, wait
+If TC/LocOccupied_PLCTOSM = 1, finish
+</note>
+	<note id="cbdc9b94-b7b5-4c9d-be3e-9e11867c09aa" location="13 25" size="10 2">S2 Task 4 - Set Value of TC/TransComm/SourceRollRun_SMTOPLC 
+== Value of Source/TransComm/SourceRollRun_PLCTOSM</note>
+	<note id="7d0db286-f5a2-4a6d-8add-1812088b6c02" location="26 16" size="7 3">Check if  tc_path} + 
+'/TransComm/ActualPosition_PLCTOSM 
+is in left side interval   </note>
+	<note id="ec261056-590d-4b5c-a079-552f92141cdb" location="26 20" size="7 3">Check if  tc_path} + 
+'/TransComm/ActualPosition_PLCTOSM is in 
+right side interval   </note>
+	<note id="8ea58995-caf0-47f2-b8be-b2a29b398e51" location="14 31" size="8 2">If TC/LocOccupied_PLCTOSM = 0, loop
+If TC/LocOccupied_PLCTOSM = 1, end loop
+</note>
+	<note id="d22fdc35-611c-4a11-91b1-1643f77d4467" location="35 1" size="9 2">If TC/Dest_is_autoSMTOPLC  = 0, Manual
+If TC/Dest_is_autoSMTOPLC = 1, Auto 
+</note>
+	<note id="39d43d2b-185b-48b5-af96-56283fc697bf" location="35 4" size="10 1">TransferCart/TransComm/InDestPos_PLCTOSM = 1</note>
+	<note id="961bc7c4-2a51-417a-b406-ef948e283db9" location="26 28" size="9 2">If TC/LocOccupied_PLCTOSM = 1, wait
+If TC/LocOccupied_PLCTOSM = 0, finish
+</note>
+	<note id="b00d6bfe-c567-455d-bde2-8e8cb34d6dd6" location="38 6" size="9 3">Check source auto_state 
+0 = manual
+1 = auto</note>
+	<note id="a5f101e8-bffe-4d67-8d17-b42e8b1c7228" location="14 36" size="9 1">S3: Reset SMTOPLC source tags</note>
+	<note id="ace1f337-b339-4e85-a984-6cbe15b3c04f" location="38 10" size="9 1">S5: Transfer Doors array in transfer cart to destination array</note>
+	<note id="48a0949f-65a7-40a2-8f7f-df8313bdd3bb" location="38 13" size="9 1">S6: write is_populated param
+</note>
+	<note id="1d3631e5-c8e2-4a9e-91da-539b9ad38dfb" location="38 16" size="9 2">Check pilenumber on first door of destination to make
+sure its populated</note>
+	<note id="e5877cc1-5d6d-457c-81bb-78a34f3ab9ac" location="26 33" size="9 1">S4: Reset TC's Door Array to Empty</note>
+	<note id="877bc2ae-c720-41c0-b8e1-15908a848d7c" location="38 19" size="9 1">S7: If pile No = -1 Reset  Dest Door Array to Empty</note>
+	<note id="b068cb5b-e33c-46a3-a782-f0b6a34a44a1" location="39 23" size="10 2">S8 Task 1 - Set Value of Destination/TransComm/InSourcePos_PLCTOSM 
+== Value of TC/TransComm/InSourcePos_PLCTOSM</note>
+	<note id="30e74b6b-597c-4f51-99a5-03061d7a2d50" location="39 25" size="10 2">S8 Task 2 - Set Value of TC/TransComm/InSourcePos_SMTOPLC ==
+Value of  Destination/TransComm/InSourcePos_PLCTOSM</note>
+	<note id="35a9b3c9-6664-4545-8cf8-1c0f34ac5a22" location="39 27" size="10 2">S8 Task 3 - Set Value of Destination/TransComm/DestRollRun_SMTOPLC 
+== Value of TC/TransComm/DestRollRun_PLCTOSM</note>
+	<note id="01f2c237-328b-4c1a-8b87-7b045c952a61" location="39 29" size="10 2">S8 Task 4 - Set Value of TC/TransComm/DestRollRun_SMTOPLC 
+== Value of Destination/TransComm/DestRollRun_PLCTOSM</note>
+	<note id="bd2000cc-5729-41d7-9a9f-2d70b429488e" location="39 34" size="9 2">If TC/LocOccupied_PLCTOSM = 1, loop
+If TC/LocOccupied_PLCTOSM = 0, end loop
+</note>
+	<note id="a49c329c-b34f-4162-98de-fba0eb78a550" location="39 37" size="9 1">S9: Reset destinationpath parameter.
+</note>
+	<note id="a16c95fb-4c90-4459-996d-c40efe2108f7" location="39 41" size="9 1">S10: Reset SMTOPLC dest  and TC Tags and ParkLocation to 0</note>
+	<link id="83b8c7e2-df3c-4b9b-9e43-f3c8b7d128ad" location="3 1"><left/><down/><right/></link>
+	<link id="b607abfd-1d7c-4e04-8671-3e7a45977adf" location="3 2"><up/><down/></link>
+	<link id="95dd0e8f-877b-4ad4-85d7-853324d5f7d0" location="4 1"><left/><right/></link>
+	<link id="852b3edd-2f06-4a3e-9975-8d5fc35748f9" location="0 5"><up/><down/><right/></link>
+	<link id="50147d9c-a315-4b9e-84bd-4380a3842870" location="3 4"><up/><down/></link>
+	<link id="83d9dcbd-35c2-4c6e-8c46-5bde74f38eb6" location="1 5"><left/><right/></link>
+	<link id="12173246-2f94-432f-84fa-719f0b2ba677" location="5 1"><up/><left/><down/><right/></link>
+	<link id="3945d56f-ef93-4f28-813d-4e4d7e0c97b7" location="2 5"><left/><right/></link>
+	<link id="01c2ae58-c6dd-4c6a-b096-8ce244c2a6ea" location="3 5"><up/><left/><right/></link>
+	<link id="8109a69b-f6af-409d-b988-6c0c25a10b0d" location="0 6"><up/><down/></link>
+	<link id="e76ac506-ebc2-4023-b233-154b61dcc351" location="6 1"><up/><left/><down/><right/></link>
+	<link id="ae3a622b-b1b8-4fea-b7e0-eff6ff58428c" location="0 7"><up/><down/></link>
+	<link id="d0b6701f-c37c-42ca-9927-cec59a40de4e" location="7 1"><up/><left/><right/></link>
+	<link id="2f1494c9-3fa5-4666-aaf9-81e0be44be17" location="0 8"><up/><down/></link>
+	<link id="c43807ed-d4e9-40e8-aeba-d7647d600702" location="8 1"><up/><left/><down/></link>
+	<link id="bfaf821e-3274-40ef-96bc-2b238aa8e05e" location="8 2"><up/><down/></link>
+	<link id="6e2100e3-015f-443c-8dfe-f10125c08127" location="8 4"><up/><down/></link>
+	<link id="6f84ab6b-991e-4784-9e6a-2ee43b581fde" location="0 9"><up/><down/></link>
+	<link id="24e10f9d-e400-4f31-a9aa-9f26b4e8e731" location="8 5"><up/><down/><right/></link>
+	<link id="5fb153a7-1ed6-44b1-9592-95bb20a5d1ef" location="0 10"><up/><down/></link>
+	<link id="8a32e9c5-0da9-422a-8f68-2259a5d422a9" location="9 5"><left/><down/><right/></link>
+	<link id="561e1eb4-710c-49f6-abc4-bde4a96dbe62" location="0 11"><up/><down/></link>
+	<link id="3649ccff-5e9a-449b-be41-7138f29d3ce7" location="10 5"><left/><right/></link>
+	<link id="6e4cb861-49cb-40bd-8089-7d6ec25cfb4c" location="0 12"><up/><down/></link>
+	<link id="6dc933c4-ae67-421a-a3e8-208ac4a6248d" location="11 5"><up/><left/><down/></link>
+	<link id="44a20715-26bb-418a-a0bb-faa888054034" location="0 13"><up/><down/></link>
+	<link id="ab82017d-3f9a-4dbd-a6a6-ef9435e6591b" location="11 7"><up/><left/><down/></link>
+	<link id="e5ac45d6-262d-4c2d-b203-847541c1d825" location="11 8"><up/><down/></link>
+	<link id="c0703a13-0dcb-4202-9508-82600e961361" location="0 14"><up/><down/></link>
+	<link id="e53ebcf4-1b15-4c6c-b6b2-fd6b1f18ea65" location="11 10"><up/><down/></link>
+	<link id="9fa795f4-010c-4f61-bd63-6c3ed0a9b11f" location="0 15"><up/><down/></link>
+	<link id="97801008-b3f0-4191-94ae-8341947f64d0" location="11 11"><up/><down/></link>
+	<link id="d10076be-a755-44b0-a9c1-b8d75b1e5aa7" location="11 12"><up/><left/><down/></link>
+	<link id="058d3503-d035-4209-acae-ad3db4792615" location="0 17"><up/><down/></link>
+	<link id="4d8d6097-e931-4004-8008-0d4251113745" location="11 13"><up/><down/></link>
+	<link id="4921eca3-45b8-4d17-8b84-455e925e01c4" location="11 14"><up/><down/></link>
+	<link id="81de1794-a40e-49d0-97e7-364d81cafeb4" location="0 18"><up/><down/></link>
+	<link id="a81445e9-89eb-45f0-9209-f1cf3736be8f" location="0 19"><up/><down/></link>
+	<link id="5b9ec85a-4cbf-4e77-bf69-4929586c1135" location="11 16"><up/><down/></link>
+	<link id="9fcf4e1f-a428-4183-adf9-234b8d5af71c" location="0 20"><up/><down/></link>
+	<link id="f71b6620-7bfd-4edf-bbcd-612cfd70314c" location="11 17"><up/><down/></link>
+	<link id="a63d7517-aed6-4f39-b0ae-2037283075b2" location="11 18"><up/><down/></link>
+	<link id="c0a6a41a-0447-4bf3-80b5-f2f1a10ddfa1" location="10 19"><up/><down/><right/></link>
+	<link id="2cad66d3-7d7c-452d-b601-b7e49d2d5328" location="11 19"><up/><left/><down/></link>
+	<link id="9b184e78-d0f5-4f55-9381-fe2ad4a30cb4" location="0 22"><up/><down/></link>
+	<link id="0f146bde-5fe4-4e84-8646-c81007547fa7" location="10 20"><up/><down/></link>
+	<link id="c53c58a2-57b5-42d3-a806-c26bd7804f6f" location="11 20"><up/><down/></link>
+	<link id="edea57b2-741b-4aaf-9ea6-7137ffa45184" location="0 23"><up/><down/></link>
+	<link id="87c12edc-86e4-4c53-813d-a31636238e7f" location="10 21"><up/><down/></link>
+	<link id="765204b2-ad02-470b-90cf-c8ff6e1fc3a2" location="11 21"><up/><down/></link>
+	<link id="a1d9c5b6-a83e-40ce-a193-fa9b0d552745" location="0 24"><up/><down/></link>
+	<link id="ef8b50df-39c9-44e0-95ba-b45ff0f9e33d" location="10 22"><up/><down/></link>
+	<link id="d1ec35e4-fdd7-4307-a7b4-b68c25883755" location="11 22"><up/><down/></link>
+	<link id="d74b12a8-fa98-43aa-a654-ab146ce89dc8" location="0 25"><up/><down/></link>
+	<link id="bc6d3c60-f88f-4f4b-b8a7-b4328aa82430" location="10 23"><up/><down/></link>
+	<link id="1e2b0f56-36f8-442b-9b7a-4132283809a6" location="25 4"><up/><down/><right/></link>
+	<link id="011f84b6-c4ff-439c-a875-98d2cae9dfd5" location="25 5"><up/><down/></link>
+	<link id="550baf2b-313c-4a6e-bccf-3cb45abc2383" location="11 23"><up/><down/></link>
+	<link id="11e71bd3-7061-4c8f-a8ef-5bff667e13e9" location="25 6"><up/><down/></link>
+	<link id="f44e65b0-d270-4005-82d6-22a6b8ae0216" location="25 7"><up/><down/></link>
+	<link id="9b821648-064f-484e-bad4-baf5f58a02c5" location="0 26"><up/><down/></link>
+	<link id="139af045-24fe-46e1-b7b2-d4df6c96c35e" location="10 24"><up/><down/></link>
+	<link id="933480d1-746c-4965-ab6d-2ab276d80905" location="25 8"><up/><down/></link>
+	<link id="3d12b130-9e67-4f36-a94b-759ece9d1803" location="26 4"><left/><right/></link>
+	<link id="fe9e42fd-6b42-4f84-bc01-a0bb5df2bc5f" location="11 24"><up/><down/></link>
+	<link id="36d08755-33dd-46d8-9aa1-c3728729f3dc" location="25 9"><up/><down/></link>
+	<link id="1269cf30-dfca-452c-8fad-4303126ab10e" location="25 10"><up/><down/></link>
+	<link id="8976588e-5a55-49cd-a0b6-e6d39fc25e49" location="10 25"><up/><down/></link>
+	<link id="e12cc5b9-750e-469d-8cd6-ce86f9fbc592" location="0 27"><up/><down/></link>
+	<link id="8b3df616-8d28-4b78-a371-f7d86f6ce5ee" location="27 4"><left/><right/></link>
+	<link id="514b1adc-f5b5-4728-87f9-5fab83897013" location="25 11"><up/><down/></link>
+	<link id="ed192ed3-37ce-470f-8e92-528059a9aac8" location="25 12"><up/><down/></link>
+	<link id="eaf9194e-37b2-41ab-af94-3c15a3ee46e5" location="10 26"><up/><down/></link>
+	<link id="ed24fb74-2414-4505-ae9c-2dffdb2aff73" location="0 28"><up/><down/></link>
+	<link id="e58d8101-7527-49ea-bf61-1a3c7ad6f736" location="28 1"><left/><down/><right/></link>
+	<link id="c0f2b9be-be6b-4e73-9a22-f05c6c4f8da3" location="28 3"><up/><down/></link>
+	<link id="0d8a4251-31f5-4be5-84c7-0e7321301e3d" location="25 13"><up/><down/></link>
+	<link id="71570a0b-bbc0-43c7-a84d-50847fc44db1" location="11 26"><up/><down/></link>
+	<link id="00855e5d-8264-4760-9c1b-1a4c167a07d2" location="28 4"><up/><left/><down/></link>
+	<link id="8653bb1b-49ab-4bc7-8f7c-b27f029b6987" location="25 14"><up/><down/></link>
+	<link id="79701ee7-5e68-4eeb-bd8e-7d770d6facb6" location="10 27"><up/><down/><right/></link>
+	<link id="1861d79a-faf8-4ad8-8cf8-51275c1ec8db" location="29 1"><left/><right/></link>
+	<link id="1b006b91-540b-42e0-8ab8-295c1a29e33a" location="25 15"><up/><down/></link>
+	<link id="420dd9fe-0312-427d-b86d-85ced9b2d43c" location="11 27"><up/><down/></link>
+	<link id="7a6a94ff-6c02-4dca-8673-27677487de68" location="25 16"><up/><down/></link>
+	<link id="ad2f5403-e079-4df8-9e4a-cbab0b66a4e1" location="10 28"><up/><down/></link>
+	<link id="2694fcc8-0456-465d-b184-ae0f84a6421d" location="0 30"><up/><down/></link>
+	<link id="afcd2ea9-d550-4bbf-9a6a-786ae175b7f2" location="30 1"><left/><right/></link>
+	<link id="60a9486a-e17e-4fd5-a82e-3544196d8ace" location="11 28"><up/><left/><down/></link>
+	<link id="56782932-c859-4585-b760-571c63863d38" location="10 29"><up/><down/></link>
+	<link id="800c77a9-af83-4739-95be-8d251923470c" location="25 18"><up/><down/></link>
+	<link id="9018c84e-8066-4cb0-bc20-8e5b93f5ded7" location="0 31"><up/><down/></link>
+	<link id="987fd119-e469-44f3-b302-31ffa3ff3058" location="31 1"><up/><left/><down/><right/></link>
+	<link id="4ab76ce3-80e5-4b0e-8f4f-af23eb163810" location="11 29"><up/><down/></link>
+	<link id="efdec1d4-dc91-4d62-ac15-9d42a2db2eda" location="25 19"><up/><down/></link>
+	<link id="6f842439-d18d-4944-b2af-a76dc4c50cf2" location="10 30"><up/><down/></link>
+	<link id="8d714ee2-73d8-4d85-a69e-7ee376582735" location="11 30"><up/><down/><right/></link>
+	<link id="b6c74d9c-f26c-4cce-8fa9-ed2190e11361" location="0 32"><up/><down/></link>
+	<link id="d41e2a81-4a37-4e34-bc1f-598890c1d3c6" location="32 1"><left/><right/></link>
+	<link id="57fc1ea6-23e8-40e3-847e-9a40d28253b7" location="12 30"><left/><right/></link>
+	<link id="ebab6c8e-213b-4dc4-9e09-afb75640352d" location="10 31"><up/><down/></link>
+	<link id="13fdad6b-0ed5-419f-ae6f-7842357744ac" location="25 21"><up/><down/></link>
+	<link id="5b59a70c-1711-4b68-bde8-847ddb0fdafb" location="13 30"><up/><left/><down/></link>
+	<link id="69bb2f6e-d057-4f19-848a-a0100d39c429" location="11 31"><up/><down/></link>
+	<link id="19b42335-4e35-4080-a6f9-18e98421107e" location="0 33"><up/><down/></link>
+	<link id="75dc82c0-1bde-4b74-b12d-16653d17b404" location="33 1"><left/><right/></link>
+	<link id="c79eb8d7-3cfd-4365-b817-66064d69d7d3" location="25 22"><up/><down/></link>
+	<link id="499a9e3d-63da-4cd3-a6d9-b0a58c016e98" location="10 32"><up/><down/></link>
+	<link id="fd79d80f-c068-443e-a6a3-66b3740890bf" location="13 31"><up/><down/></link>
+	<link id="5bfdcd6c-d2b5-4fe8-bd03-fd7fd205f9b1" location="25 23"><up/><down/></link>
+	<link id="56bfd8b3-8823-4e23-8193-fcec492b0150" location="0 34"><up/><down/></link>
+	<link id="051e6028-6b27-48e7-87ef-ab3d54beb7a9" location="34 1"><left/><down/><right/></link>
+	<link id="48463d1f-9103-467f-be17-ba05b760965e" location="34 3"><up/><down/></link>
+	<link id="c165f966-5e32-46e1-8962-da321e98fcda" location="34 5"><up/><down/></link>
+	<link id="62fb113d-f956-4b64-98a4-d8d6a2aec698" location="10 33"><up/><down/><right/></link>
+	<link id="af7097cc-64ef-4386-8344-365f66124e7e" location="34 6"><up/><down/><right/></link>
+	<link id="e15b1cba-56d1-4dc6-b9e1-54c66eaf0218" location="25 24"><up/><down/></link>
+	<link id="3467f9c2-9616-4c84-9903-9a34548b3379" location="11 33"><up/><left/><down/><right/></link>
+	<link id="b5cdae5f-26d5-4f79-91f0-f0b27acc483a" location="34 8"><up/><down/></link>
+	<link id="d44e8b97-902c-47d2-8265-567697c8075f" location="0 35"><up/><down/></link>
+	<link id="83cd5d3b-9c49-4168-90f8-c87b23fa0ae4" location="34 9"><up/><down/></link>
+	<link id="43d6d694-af70-4e40-a328-468763528db3" location="25 25"><up/><down/></link>
+	<link id="37a44e8a-db1b-4fb4-bfc0-cf6245707745" location="34 10"><up/><down/></link>
+	<link id="312f7447-5a7d-4704-9736-c54215852e48" location="13 33"><up/><down/></link>
+	<link id="d8c1f0f2-abd0-4784-8f91-2b9d5a94b2fd" location="35 6"><left/><right/></link>
+	<link id="90de7384-c4d6-441d-ba46-145b5f3b92c3" location="34 11"><up/><down/></link>
+	<link id="2c68b2a2-faf5-4f99-b688-3351b92f0d52" location="0 36"><up/><down/></link>
+	<link id="ead078b6-d0f7-4c8e-98e1-0bdf6959f777" location="34 12"><up/><down/></link>
+	<link id="f59343c3-b96f-4c7b-ac51-6e0d2268c52c" location="25 26"><up/><down/></link>
+	<link id="448a62d6-5848-4f90-baa2-0424792108a1" location="34 13"><up/><down/></link>
+	<link id="0b05cec2-07de-40ea-ae5a-9ae4a3869ed1" location="13 34"><up/><down/></link>
+	<link id="7dee809c-5a8f-4127-987e-8cb4a3961c42" location="36 6"><left/><right/></link>
+	<link id="48bd3944-ca9e-4e95-9998-ba052d9669b6" location="34 14"><up/><down/></link>
+	<link id="5fa746eb-ddba-4a40-a190-917039d9e13c" location="25 27"><up/><down/></link>
+	<link id="3275ef31-b4e7-4e65-bea8-44151e2bd720" location="0 37"><up/><down/><right/></link>
+	<link id="5b1ef582-de62-40c8-93d2-af0e7c27b35a" location="1 37"><left/><right/></link>
+	<link id="75091dcb-e121-4108-a7af-f9f81eabe69a" location="2 37"><left/><right/></link>
+	<link id="5b001035-961d-4fc1-8940-569f1d348160" location="3 37"><left/><right/></link>
+	<link id="d796868b-84c2-4713-a1ea-a2d190c3ecd6" location="34 15"><up/><down/></link>
+	<link id="35088946-83b2-4d47-9d67-ea118e55ea33" location="4 37"><left/><right/></link>
+	<link id="f0ce32d5-283b-46e6-86ef-61e2a105d36b" location="5 37"><left/><right/></link>
+	<link id="c62b9466-6967-4050-bc34-bdaac61dabde" location="13 35"><up/><down/></link>
+	<link id="f90076b5-0ab2-4c3d-aca6-3bc0a9943c80" location="6 37"><left/><right/></link>
+	<link id="e1458eb7-7d9f-4f3b-ad8a-2da2e7c74b32" location="37 6"><up/><left/><down/></link>
+	<link id="fc52a5e2-83db-43f3-b110-21d97c0715cc" location="25 28"><up/><down/></link>
+	<link id="3e57bb3c-699b-41cd-8832-9553f83052eb" location="34 16"><up/><down/></link>
+	<link id="e103f63d-69c4-4cb4-acd9-af31198677fa" location="7 37"><left/><right/></link>
+	<link id="b9d68de7-3a2c-4333-8e90-e1d877973a85" location="8 37"><left/><right/></link>
+	<link id="c85fd4b5-5d74-43c6-a7da-87663e963085" location="37 8"><up/><down/></link>
+	<link id="6a11d4ee-1224-4614-afc2-ff62267a21f0" location="34 17"><up/><down/></link>
+	<link id="7df3089e-08f9-41c6-9234-8e768e69ee3a" location="9 37"><left/><right/></link>
+	<link id="40f77adc-5641-48d2-a67c-703edbbac70b" location="37 9"><up/><down/></link>
+	<link id="43847f44-4099-4085-b8c8-ae7b695375fd" location="10 37"><left/><right/></link>
+	<link id="1ceb5ae5-b31b-44a1-aaad-1aceca863106" location="34 18"><up/><down/><right/></link>
+	<link id="89fb516c-747f-48a0-90f0-8397afc5ccbe" location="11 37"><left/><right/></link>
+	<link id="73a9a2b0-03ec-4a48-8d6b-3f6da3c71dbb" location="37 11"><up/><down/></link>
+	<link id="ae08bed0-9c26-4f05-9491-84c2cd05a2f8" location="12 37"><left/><right/></link>
+	<link id="cfaa7bff-aa8b-4753-afcd-7eb3b9459bac" location="37 12"><up/><down/></link>
+	<link id="4b4f4cba-0338-41e1-be72-a5fd2269221a" location="34 19"><up/><down/></link>
+	<link id="2451b155-7a26-4892-8601-b05beedd79f7" location="25 30"><up/><down/></link>
+	<link id="424b93d9-2a10-4ff0-9159-7a8622e5ba17" location="13 37"><up/><left/><down/></link>
+	<link id="bbea0b53-593c-47e1-9ac4-e8528d85a203" location="34 20"><up/><left/><right/></link>
+	<link id="cf16cbef-9fbf-4097-ac23-2c3e0db6d4fd" location="37 14"><up/><down/></link>
+	<link id="acf0d4e4-d513-43cb-b05c-089142588e2a" location="25 31"><up/><down/></link>
+	<link id="bcb60581-6b3a-4df7-b45f-43e1c1ffa575" location="37 15"><up/><down/></link>
+	<link id="6e2266f3-a7df-4db0-8668-2e5654b9be71" location="35 20"><left/><right/></link>
+	<link id="0c5fe409-b034-4c6c-98af-9e421ad9d981" location="25 32"><up/><down/></link>
+	<link id="703a8e96-d176-45da-9f95-7dc68a7c3f5e" location="37 17"><up/><down/></link>
+	<link id="6795f69e-0750-4f60-bd17-4579c7336608" location="37 18"><up/><down/></link>
+	<link id="42ac0b7c-5b7c-444f-9eff-a8af7f0bde0b" location="36 20"><left/><right/></link>
+	<link id="3eb58dd7-e845-473b-b2ab-9953b0be5aa3" location="36 21"><up/><down/><right/></link>
+	<link id="4b0f3b05-1951-45ed-9353-7f50104c7fa7" location="37 20"><up/><left/><down/></link>
+	<link id="fb4a6257-0d92-4b9a-a688-d7bb9ce12085" location="36 22"><up/><down/></link>
+	<link id="8075c671-ee3a-4df9-8361-667962791bb5" location="25 34"><up/><down/></link>
+	<link id="97fb2eee-5bbb-4ae4-8f04-386aec9f0012" location="37 21"><up/><left/><down/></link>
+	<link id="dda6e045-bad1-45db-ba3c-ff80ab6ebbda" location="36 23"><up/><down/></link>
+	<link id="dc58ea77-4bff-410b-9009-b69ff553896b" location="25 35"><up/><down/></link>
+	<link id="03c0e9f2-d8da-40cf-92ca-2d829eff2f1d" location="37 22"><up/><down/></link>
+	<link id="deb47010-2e79-4592-9068-e33f979421d6" location="36 24"><up/><down/></link>
+	<link id="3edecf2a-a6b2-4f94-ac18-8904bd778a7d" location="37 23"><up/><down/></link>
+	<link id="5dc974e6-f2b4-4f90-b9db-2804c4f8afae" location="25 36"><up/><down/></link>
+	<link id="52753644-7646-4d71-98b1-d2c04551a999" location="36 25"><up/><down/></link>
+	<link id="80124653-d03e-4228-a647-11ba7cb0397f" location="37 24"><up/><down/></link>
+	<link id="37fc9374-f1a6-4710-ae49-042fa53df878" location="36 26"><up/><down/></link>
+	<link id="f9910363-fb1d-4dd9-881d-8a60ebe1b4d2" location="25 37"><up/><down/><right/></link>
+	<link id="f5338329-243e-49b8-9c9b-3e1b52ffb49e" location="37 25"><up/><down/></link>
+	<link id="7d30cc84-2d92-43af-b154-7fe4fd6b8087" location="36 27"><up/><down/></link>
+	<link id="3cb800bb-0d08-4f9d-893d-5d33b9afec3c" location="37 26"><up/><down/></link>
+	<link id="b6b035b6-f63f-43f3-89fb-e15b3603cd14" location="25 38"><up/><down/></link>
+	<link id="d97dce6f-f1ef-4718-b637-a87722765612" location="36 28"><up/><down/><right/></link>
+	<link id="046b762a-50b7-45a3-b11a-de1503535311" location="36 29"><up/><down/></link>
+	<link id="156b3bcf-26fd-436f-b4ad-0a3dbee8556a" location="25 39"><up/><down/><right/></link>
+	<link id="78b5ff79-fbf4-491c-9d7b-5e10e5b0dd94" location="37 28"><up/><down/></link>
+	<link id="7a84eea2-9996-48cf-a58d-5ac58de639ba" location="36 30"><up/><down/></link>
+	<link id="a62eb259-2cf1-4807-9771-b499ca7a154f" location="26 39"><left/><right/></link>
+	<link id="8ffea8d4-46cb-43d6-a352-2abdab613a91" location="37 29"><up/><down/></link>
+	<link id="034c8275-ea8c-4a16-96c2-afd1016455ca" location="27 39"><left/><right/></link>
+	<link id="8ba08830-dfcf-4ec8-80e3-997fa0e5185c" location="36 31"><up/><down/></link>
+	<link id="fbf714f3-db6b-4b90-9ce9-1654715c6703" location="37 30"><up/><down/></link>
+	<link id="795e87c1-1fc4-4a3f-8dd3-91135a385587" location="28 39"><left/><right/></link>
+	<link id="c58ffc50-9a14-4c09-a35d-041acf0121fb" location="36 32"><up/><down/></link>
+	<link id="ef54fb47-a604-4f93-8bc2-2a50943ba044" location="37 31"><up/><down/></link>
+	<link id="54be5543-5918-442e-8881-e98245913ac1" location="29 39"><left/><right/></link>
+	<link id="ff406cbd-a859-4d46-8d4f-2629ae26921f" location="36 33"><up/><down/></link>
+	<link id="21081f6c-8037-4a9a-a417-825afa5a3492" location="37 32"><up/><down/></link>
+	<link id="dc27193e-a5a4-4ebc-8579-4e1093467799" location="30 39"><left/><right/></link>
+	<link id="bb93a536-5781-4bef-8287-fa0bad891533" location="36 34"><up/><down/></link>
+	<link id="d4183afa-88b7-49a0-829a-ecb936cefd4e" location="37 33"><up/><down/></link>
+	<link id="b55e4c26-f952-4ae6-a689-08020cc00a25" location="31 39"><left/><right/></link>
+	<link id="41a91fd4-1ae9-4ba0-9a62-c9da2990c47a" location="36 35"><up/><down/></link>
+	<link id="19345d0c-d7e8-45c9-b1cd-eeea8e64857e" location="37 34"><up/><down/><right/></link>
+	<link id="be0ee1cd-d26d-443a-8acf-3624af9ce35a" location="32 39"><left/><right/></link>
+	<link id="9336e56a-e648-49ca-abe3-2a787e2201ef" location="36 36"><up/><left/><right/></link>
+	<link id="f021e8af-be97-4a82-abfe-97e35515bcc8" location="38 34"><left/><down/><right/></link>
+	<link id="293d55d9-28f1-4a62-a1fd-562d1ad0195e" location="33 39"><left/><right/></link>
+	<link id="8fd44bbc-f693-462a-8d9a-baf758500a01" location="37 36"><up/><left/><down/></link>
+	<link id="8d1f8b06-d963-4413-85c0-a5bc0ad2c693" location="34 39"><left/><right/></link>
+	<link id="58540e2f-13ab-48ee-9443-9522bc6ad4cc" location="38 36"><up/><down/></link>
+	<link id="d200289c-2cc5-45ad-b9d8-d25466191a70" location="35 39"><left/><right/></link>
+	<link id="12cc109c-afc4-48dd-bcab-2e0cc8b79481" location="36 39"><left/><right/></link>
+	<link id="30f9b9c8-249a-499f-90c3-b00211a18493" location="38 38"><up/><down/></link>
+	<link id="b1da34a9-0125-4ab7-b4e3-b76916353f20" location="37 39"><left/><right/></link>
+	<link id="86c5b161-3a12-4dbf-9bad-64f833025036" location="38 39"><up/><left/><down/></link>
+	<link id="276f65ee-0082-4244-aefa-fd86662e895d" location="38 40"><up/><down/></link>
+	<link id="d2211dfb-7201-46d2-b61c-dc5d3f3656b8" location="38 42"><up/><down/></link>
+
+</sfc>

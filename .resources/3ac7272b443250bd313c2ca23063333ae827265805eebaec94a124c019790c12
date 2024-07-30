@@ -1,0 +1,161 @@
+{
+  "custom": {},
+  "params": {
+    "Label": "FPA3_13",
+    "TagPath": "[default]Press_Infeed/AGTC_FPA3_13"
+  },
+  "propConfig": {
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 72,
+      "width": 275
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 92,
+          "x": 0.0042629,
+          "y": 15.7045
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "concat({view.params.Label} + \":\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold",
+            "textAlign": "right"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "NumericEntryField_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 150,
+          "x": 123.99826292419434,
+          "y": 39.40454788208008
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.TagPath}"
+                },
+                "tagPath": "{1}/Coordinate/Y_Direction"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "inputBounds": {
+            "maximum": 1,
+            "minimum": -1
+          }
+        },
+        "type": "ia.input.numeric-entry-field"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 37,
+          "x": 105.49826292419434,
+          "y": 0.0045478820800788355
+        },
+        "props": {
+          "text": "X:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "NumericEntryField"
+        },
+        "position": {
+          "height": 32,
+          "width": 150,
+          "x": 124.00426292419434,
+          "y": 0.0045478820800788355
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.TagPath}"
+                },
+                "tagPath": "{1}/Coordinate/X_Location"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "inputBounds": {
+            "maximum": 40000,
+            "minimum": 0
+          }
+        },
+        "type": "ia.input.numeric-entry-field"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 32,
+          "width": 37,
+          "x": 105.98826292419433,
+          "y": 39.40454788208008
+        },
+        "props": {
+          "text": "Y:"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0,
+      "y": 11.703125
+    },
+    "type": "ia.container.coord"
+  }
+}

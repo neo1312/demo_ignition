@@ -1,0 +1,15 @@
+{
+  "base": {
+    "style": {
+      "cursor": "pointer"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "disabled",
+      "style": {
+        "cursor": "not-allowed"
+      }
+    }
+  ]
+}

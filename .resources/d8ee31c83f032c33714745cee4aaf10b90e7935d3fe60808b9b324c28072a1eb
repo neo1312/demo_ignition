@@ -1,0 +1,2632 @@
+{
+  "custom": {},
+  "params": {
+    "PopupTitle": "Enter Serial Number"
+  },
+  "propConfig": {
+    "params.PopupTitle": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1030,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label_172"
+        },
+        "position": {
+          "height": 36,
+          "width": 186,
+          "x": 1099.19,
+          "y": 125
+        },
+        "props": {
+          "text": "West Rollerbed - FPA3"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_247"
+        },
+        "position": {
+          "height": 60,
+          "width": 902,
+          "x": 45.51,
+          "y": 25.51
+        },
+        "props": {
+          "text": "Press Infeed Rollerbeds",
+          "textStyle": {
+            "fontSize": 24,
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_188"
+        },
+        "position": {
+          "height": 36,
+          "width": 181,
+          "x": 1098.69,
+          "y": 211
+        },
+        "props": {
+          "text": "Center Rollerbed - FPA5"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_203"
+        },
+        "position": {
+          "height": 36,
+          "rotate": {
+            "anchor": "50% 39%"
+          },
+          "width": 165,
+          "x": 1413.58,
+          "y": 295
+        },
+        "props": {
+          "text": "East Rollerbed - FPA7"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "RollerBed"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 45.52,
+          "y": 90.94
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_13",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_13",
+            "pile": 8
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_0"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75.00000000000001,
+          "x": 125.58,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_12",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_12",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_1"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 74.99999999999997,
+          "x": 205.58,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_11",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_11",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_2"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75,
+          "x": 285.58,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_10",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_10",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_3"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75,
+          "x": 365.58,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_9",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_9",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_4"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75.00000000000006,
+          "x": 445.58,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_8",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_8",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_5"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75,
+          "x": 525.58,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_7",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_7",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_6"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75,
+          "x": 605.58,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_6",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_6",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_7"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75,
+          "x": 685.58,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_5",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_5",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_8"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75,
+          "x": 765.61,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_4",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_4",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_9"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75,
+          "x": 845.61,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_3",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_3",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_10"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 75,
+          "x": 925.61,
+          "y": 90.98
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_2",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_2",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_11"
+        },
+        "position": {
+          "height": 87.98,
+          "width": 74.99999999999989,
+          "x": 1005.6096875000001,
+          "y": 91.02
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_1",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_1",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_12"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 845.61,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_3",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_3",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_13"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 925.61,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_2",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_2",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_14"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 74.99999999999989,
+          "x": 1005.6096875000001,
+          "y": 177.02
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_1",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_1",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_15"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 765.61,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_4",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_4",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_16"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 685.58,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_5",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_5",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_17"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 605.58,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_6",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_6",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_18"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 525.58,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_7",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_7",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_19"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75.00000000000006,
+          "x": 445.58,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_8",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_8",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_20"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 365.58,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_9",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_9",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_21"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75,
+          "x": 285.58,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_10",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_10",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_22"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 74.99999999999997,
+          "x": 205.58,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_11",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_11",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_23"
+        },
+        "position": {
+          "height": 87.97999999999999,
+          "width": 75.00000000000001,
+          "x": 125.58,
+          "y": 176.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_12",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_12",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_24"
+        },
+        "position": {
+          "height": 87.98000000000002,
+          "width": 75,
+          "x": 45.52,
+          "y": 176.94
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_13",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_13",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_25"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 845.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_7",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_7",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_26"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 925.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_6",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_6",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_27"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 74.99999999999989,
+          "x": 1005.5896875000001,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_5",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_5",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_28"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 765.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_8",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_8",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_29"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 685.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_9",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_9",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_30"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 605.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_10",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_10",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_31"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 525.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_11",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_11",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_32"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75.00000000000006,
+          "x": 445.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_12",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_12",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_33"
+        },
+        "position": {
+          "height": 88,
+          "width": 75,
+          "x": 365.58,
+          "y": 260.97
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_13",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_13",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_34"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 285.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_14",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_14",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_35"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 74.99999999999997,
+          "x": 205.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_15",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_15",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_36"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75.00000000000001,
+          "x": 125.58,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_16",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_16",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_37"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 45.507687499999975,
+          "y": 260.94
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_17",
+            "RollerColor": "#A9A9A9",
+            "Skid": true,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_17",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_38"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 1165.5896875,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_3",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_3",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_39"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 1245.5896875,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_2",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_2",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_40"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 1325.5896875,
+          "y": 261.02
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_1",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_1",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_41"
+        },
+        "position": {
+          "height": 88.23000000000002,
+          "width": 75,
+          "x": 1085.5896875,
+          "y": 260.96
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_4",
+            "RollerColor": "#A9A9A9",
+            "Skid": false,
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_4",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "custom": {
+          "Pile": 3280
+        },
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "height": 426.02000000000004,
+          "width": 805,
+          "x": 429.6,
+          "y": 420.95
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "parameters": {
+                  "stackId": "{session.custom.PileClicked}"
+                },
+                "queryPath": "Press_Infeed/GetStackData"
+              },
+              "type": "query"
+            }
+          },
+          "props.selection.enableRowSelection": {
+            "binding": {
+              "config": {
+                "path": "../tgl_edit.props.selected"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "pager": {
+            "options": [
+              1,
+              5,
+              10,
+              25,
+              50
+            ]
+          },
+          "selection": {},
+          "virtualized": false
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "update_table",
+              "pageScope": true,
+              "script": "\tself.refreshBinding(\u0027props.data\u0027)",
+              "sessionScope": false,
+              "viewScope": false
+            }
+          ]
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 30.5,
+          "width": 302,
+          "x": 695.59,
+          "y": 380
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "if ({session.custom.PileClicked} !\u003d null, \"Currently Viewing Stack:\", \u0027Click Pile to View Info!\u0027)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Text/Label"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "tgl_edit"
+        },
+        "position": {
+          "height": 36.22000000000003,
+          "width": 200,
+          "x": 1290.6,
+          "y": 420.94
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{session.custom.PileClicked}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif \u0027S\u0027 in self.session.custom.PileClicked:\n\t\treturn False\n\telse:\n\t\treturn True\n\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "text": "Edit Mode"
+          },
+          "selected": true
+        },
+        "type": "ia.input.toggle-switch"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t#Set values to properties\n\tdata \u003d self.getSibling(\"Table\").props.data\n\trow \u003d self.getSibling(\"Table\").props.selection.selectedRow\n\tserial \u003d data.getValueAt(row, \u0027Serial\u0027)\n\tself.session.custom.Serial \u003d serial\n\tsystem.perspective.openPopup(id \u003d \u0027Delete_Door\u0027, view \u003d \u0027Popups/Delete_Door\u0027, title \u003d \u0027Confirm Deletion of Door:\u0027)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "btn_deletedoor"
+        },
+        "position": {
+          "height": 39.07999999999993,
+          "width": 118,
+          "x": 1308.6,
+          "y": 520.07
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table.props.selection.selectedRow} !\u003d null \u0026\u0026 {../tgl_edit.props.selected}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "Delete Door"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "test"
+        },
+        "position": {
+          "height": 32.400000000000034,
+          "width": 165,
+          "x": 1285.1,
+          "y": 466.71
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "../tgl_edit.props.selected"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "if ({../Table.props.selection.selectedRow} \u003d null, \u0027Select Row to Modify\u0027, \u0027Modifying Door:\u0027)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 30.5,
+          "width": 75,
+          "x": 1415.4,
+          "y": 467.65
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../tgl_edit.props.selected} \u0026\u0026 {../Table.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{../Table.props.data}[{../Table.props.selection.selectedRow}, \u0027Serial\u0027]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tsystem.perspective.openPopup(id \u003d \u0027Add_Door\u0027, view \u003d \u0027Popups/Add_Door\u0027, title\u003dself.view.params.PopupTitle)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "btn_deletedoor_0"
+        },
+        "position": {
+          "height": 39.07999999999993,
+          "width": 118,
+          "x": 1308.6,
+          "y": 575.059
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "../tgl_edit.props.selected"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "text": "Add Door to Pile"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 32,
+          "width": 50,
+          "x": 963.0927221679688,
+          "y": 378.4910717010498
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{session.custom.PileClicked} !\u003d null"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "session.custom.PileClicked"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Text/Label"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0,
+      "y": -8
+    },
+    "props": {
+      "pipes": [
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe",
+          "origin": {
+            "x": 1146,
+            "y": 288
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        },
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_0",
+          "origin": {
+            "x": 514,
+            "y": 101
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        },
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_1",
+          "origin": {
+            "x": 231,
+            "y": 624
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

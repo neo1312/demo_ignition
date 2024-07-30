@@ -1,0 +1,1 @@
+EXEC dbo.DET_GetRollerbedLocationData  @location = :location

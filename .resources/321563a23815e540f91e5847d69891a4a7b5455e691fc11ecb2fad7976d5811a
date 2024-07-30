@@ -1,0 +1,187 @@
+{
+  "custom": {},
+  "params": {
+    "active": false,
+    "description": "",
+    "name": ""
+  },
+  "propConfig": {
+    "params.active": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.description": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 25,
+      "width": 500
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "lineArrow_0"
+        },
+        "position": {
+          "basis": "20px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.active"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M327.2,200L340,228.653L314.399,228.653L327.2,200Z",
+                      "fill": {
+                        "paint": "grey"
+                      },
+                      "name": "path",
+                      "style": {},
+                      "type": "path"
+                    }
+                  ],
+                  "name": "group",
+                  "transform": "matrix(0.585919,0,0,0.523507,133.62,85.3605)",
+                  "type": "group"
+                }
+              ],
+              "name": "group",
+              "transform": "matrix(1,0,0,1,-317,-190)",
+              "type": "group"
+            }
+          ],
+          "style": {
+            "transform": "rotate(90deg)"
+          },
+          "viewBox": "0 0 16 16"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "lbl_name"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.active"
+              },
+              "transforms": [
+                {
+                  "fallback": "transparent",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "transparent"
+                    },
+                    {
+                      "input": true,
+                      "output": "lightGreen"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Step: \" + {view.params.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "paddingLeft": "10px"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.active"
+              },
+              "transforms": [
+                {
+                  "fallback": "transparent",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "transparent"
+                    },
+                    {
+                      "input": true,
+                      "output": "lightGreen"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.description"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,1 @@
+EXEC UpdatePileData @serial = :Serial, @pile = 0, @delete = 1, @add = 0, @user = :user

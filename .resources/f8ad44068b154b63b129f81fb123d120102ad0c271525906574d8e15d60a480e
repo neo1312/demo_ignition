@@ -1,0 +1,441 @@
+{
+  "custom": {},
+  "params": {
+    "title": "Manual",
+    "visible": true
+  },
+  "propConfig": {
+    "params.title": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.visible": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 67,
+      "width": 525
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "path": "session.props.theme"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "#000000",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": "light",
+                          "output": "#FFFFFF"
+                        },
+                        {
+                          "input": null,
+                          "output": "#000000"
+                        },
+                        {
+                          "input": "light-cool",
+                          "output": "#FFFFFF"
+                        },
+                        {
+                          "input": "light-warm",
+                          "output": "#FFFFFF"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.title"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "textStyle": {
+                "fontWeight": "bolder",
+                "textAlign": "center",
+                "textDecoration": "underline"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.style.backgroundColor": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.theme"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "#000000",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "light",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": null,
+                              "output": "#000000"
+                            },
+                            {
+                              "input": "light-cool",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": "light-warm",
+                              "output": "#FFFFFF"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "text": "Name",
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "84px"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "46px"
+                },
+                "propConfig": {
+                  "props.style.backgroundColor": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.theme"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "#000000",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "light",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": null,
+                              "output": "#000000"
+                            },
+                            {
+                              "input": "light-cool",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": "light-warm",
+                              "output": "#FFFFFF"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "text": "X",
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "propConfig": {
+                  "props.style.backgroundColor": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.theme"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "#000000",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "light",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": null,
+                              "output": "#000000"
+                            },
+                            {
+                              "input": "light-cool",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": "light-warm",
+                              "output": "#FFFFFF"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "text": "SourceY",
+                  "textStyle": {
+                    "fontSize": 14,
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "position": {
+                  "basis": "78px"
+                },
+                "props": {
+                  "text": " DestY",
+                  "textStyle": {
+                    "fontSize": 14
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "181px"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.visible"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.style.backgroundColor": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.theme"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "#000000",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "light",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": null,
+                              "output": "#000000"
+                            },
+                            {
+                              "input": "light-cool",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": "light-warm",
+                              "output": "#FFFFFF"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "text": "Auto",
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.style.backgroundColor": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.theme"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "#000000",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "light",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": null,
+                              "output": "#000000"
+                            },
+                            {
+                              "input": "light-cool",
+                              "output": "#FFFFFF"
+                            },
+                            {
+                              "input": "light-warm",
+                              "output": "#FFFFFF"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "text": "SemiAuto",
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "257px"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "backgroundColor": "#000000"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

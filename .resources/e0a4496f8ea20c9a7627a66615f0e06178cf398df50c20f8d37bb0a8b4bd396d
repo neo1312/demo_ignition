@@ -1,0 +1,3953 @@
+{
+  "custom": {},
+  "params": {
+    "instance_height": 30,
+    "instance_name": " infeed",
+    "instance_position": 0,
+    "instance_width": 100,
+    "max": 1700,
+    "min": 0
+  },
+  "propConfig": {
+    "params.instance_height": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.instance_name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.instance_position": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.instance_width": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.max": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.min": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 886,
+      "width": 1903
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "CoordinateContainer_5"
+        },
+        "position": {
+          "height": 147,
+          "width": 146,
+          "x": 1309.08,
+          "y": 84.35625
+        },
+        "props": {
+          "style": {
+            "borderColor": "#47FFFF",
+            "borderStyle": "dashed",
+            "borderWidth": 0.5
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "CoordinateContainer_6"
+        },
+        "position": {
+          "height": 107,
+          "width": 195,
+          "x": 409.19,
+          "y": 5.05
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "../SetParkLocation.props.selected"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderColor": "#47FFFF",
+            "borderStyle": "dashed",
+            "borderWidth": 0.5
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "height": 130,
+          "width": 160,
+          "x": 79.35,
+          "y": 306.69
+        },
+        "props": {
+          "style": {
+            "borderColor": "#47FFFF",
+            "borderStyle": "dashed",
+            "borderWidth": 0.5
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 32,
+              "width": 212,
+              "x": 10.73,
+              "y": 5.69
+            },
+            "props": {
+              "style": {
+                "classes": "Text/Label"
+              },
+              "text": "Press 3 Infeed"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_1"
+        },
+        "position": {
+          "height": 147,
+          "width": 247,
+          "x": 604.64,
+          "y": 84.3
+        },
+        "props": {
+          "style": {
+            "borderColor": "#47FFFF",
+            "borderStyle": "dashed",
+            "borderWidth": 0.5
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 32,
+              "width": 212,
+              "x": 34.80812500000002,
+              "y": 7.690000000000001
+            },
+            "props": {
+              "style": {
+                "classes": "Text/Label"
+              },
+              "text": "Press 3 Outfeed"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_2"
+        },
+        "position": {
+          "height": 147,
+          "width": 276,
+          "x": 1002.58,
+          "y": 85.06
+        },
+        "props": {
+          "style": {
+            "borderColor": "#47FFFF",
+            "borderStyle": "dashed",
+            "borderWidth": 0.5
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 32,
+              "width": 212,
+              "x": 49.18312500000002,
+              "y": 95.78375
+            },
+            "props": {
+              "style": {
+                "classes": "Text/Label"
+              },
+              "text": "Press 2 Outfeed"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_3"
+        },
+        "position": {
+          "height": 130,
+          "width": 313,
+          "x": 650.96,
+          "y": 310.1
+        },
+        "props": {
+          "style": {
+            "borderColor": "#47FFFF",
+            "borderStyle": "dashed",
+            "borderWidth": 0.5
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 32,
+              "width": 212,
+              "x": 15.23,
+              "y": 94.69
+            },
+            "props": {
+              "style": {
+                "classes": "Text/Label"
+              },
+              "text": "Press 2 Infeed"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_4"
+        },
+        "position": {
+          "height": 130,
+          "width": 234,
+          "x": 327.81,
+          "y": 306.93
+        },
+        "props": {
+          "style": {
+            "borderColor": "#47FFFF",
+            "borderStyle": "dashed",
+            "borderWidth": 0.5
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "height": 147,
+          "width": 260,
+          "x": 148.32,
+          "y": 85.09
+        },
+        "props": {
+          "style": {
+            "borderColor": "#47FFFF",
+            "borderStyle": "dashed",
+            "borderWidth": 0.5
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "Label_247"
+        },
+        "position": {
+          "height": 60,
+          "width": 166,
+          "x": 43.8,
+          "y": 4.13
+        },
+        "props": {
+          "text": "Transfer Cart",
+          "textStyle": {
+            "fontSize": 24,
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "RollerBed"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 342.404,
+          "y": 301.801
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA10_1",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_2/AGTC_FPA10_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_0"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "anchor": "25% 50%",
+            "angle": 90
+          },
+          "width": 74.99999999999994,
+          "x": 515.266,
+          "y": 282.952
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA12_1",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_2/AGTC_FPA12_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_1"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 76,
+          "x": 576.952,
+          "y": 303.224
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA14_1",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_2/AGTC_FPA14_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_2"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 681.3,
+          "y": 302.6
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA16_2",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_2/AGTC_FPA16_2",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_4"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 895.84,
+          "y": 302.205
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA22_2",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_2/AGTC_FPA22_2",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_24"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "anchor": "-274% 164%",
+            "angle": 90
+          },
+          "width": 75,
+          "x": 390.502,
+          "y": -193.708
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA5_13",
+            "RollerColor": "#A9A9A9",
+            "TagPath": "[default]Press_Infeed/AGTC_FPA5_13",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_9"
+        },
+        "position": {
+          "height": 89,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75.00000000000003,
+          "x": 176.497,
+          "y": 149.803
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA3_13",
+            "RollerColor": "#A9A9A9",
+            "TagPath": "[default]Press_Infeed/AGTC_FPA3_13",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_15"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 629.297,
+          "y": 148.081
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA13_1",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_3/AGTC_FPA13_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_P3_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_16"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 768.45,
+          "y": 149.654
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA15_1",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_3/AGTC_FPA15_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_P3_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_26"
+        },
+        "position": {
+          "height": 87.99999999999994,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 1791,
+          "y": 302
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA28_1",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_Auxiliary_Conveyors/AGTC_FPA28_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_27"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "anchor": "50% 60%",
+            "angle": 90
+          },
+          "width": 75,
+          "x": 1342.69,
+          "y": 139.9
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "DETA27_1",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]DET_Rollerbeds/AGTC_DETA27_1",
+            "TextColor": "#000000",
+            "pile": 9
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "height": 323,
+          "width": 622,
+          "x": 53.8,
+          "y": 464
+        },
+        "propConfig": {
+          "custom.ids": {
+            "binding": {
+              "config": {
+                "path": "this.props.data"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn value.getColumnAsList(6)",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.data": {
+            "binding": {
+              "config": {
+                "polling": {
+                  "enabled": true,
+                  "rate": "5"
+                },
+                "queryPath": "Transfer_Carts/Queue/Infeed_Queue"
+              },
+              "type": "query"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Source",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Destination1",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Destination2",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY HH:mm:ss",
+              "editable": false,
+              "field": "PileNumber",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY HH:mm:ss",
+              "editable": false,
+              "field": "TimeStamp",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "date",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": false,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Pos_id",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": false,
+              "width": ""
+            }
+          ],
+          "virtualized": false
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_11"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "anchor": "203% 25%",
+            "angle": 90
+          },
+          "width": 75,
+          "x": 68.7477,
+          "y": 441.131
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA6_12",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_Backfill_RB/AGTC_FPA6_12",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 359.02,
+          "x": 185.3,
+          "y": 431.99
+        },
+        "props": {
+          "style": {
+            "textAlign": "center"
+          },
+          "text": "Infeed TC Queue"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Table_0"
+        },
+        "position": {
+          "height": 323,
+          "width": 622,
+          "x": 1175,
+          "y": 464.02
+        },
+        "propConfig": {
+          "custom.ids": {
+            "binding": {
+              "config": {
+                "path": "this.props.data"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn value.getColumnAsList(6)",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.data": {
+            "binding": {
+              "config": {
+                "polling": {
+                  "enabled": true,
+                  "rate": "5"
+                },
+                "queryPath": "Transfer_Carts/Queue/Outfeed_Queue"
+              },
+              "type": "query"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Source",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Destination1",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Destination2",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY HH:mm:ss",
+              "editable": false,
+              "field": "PileNumber",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY HH:mm:ss",
+              "editable": false,
+              "field": "TimeStamp",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "date",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": false,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Pos_id",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": false,
+              "width": ""
+            }
+          ],
+          "virtualized": false
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 32,
+          "width": 359.02,
+          "x": 1306.51,
+          "y": 432.006
+        },
+        "props": {
+          "style": {
+            "textAlign": "center"
+          },
+          "text": "Outfeed TC Queue"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "page": "/press_infeed"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 203,
+          "x": 189.7475,
+          "y": 110
+        },
+        "props": {
+          "text": "Press Infeed"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "page": "/press_backfill"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "height": 34,
+          "width": 134,
+          "x": 95.90074999999999,
+          "y": 390.484
+        },
+        "props": {
+          "text": "Press Backfill"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "page": "/det_rollerbed"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_2"
+        },
+        "position": {
+          "height": 34,
+          "width": 133,
+          "x": 1314.77,
+          "y": 95.046875
+        },
+        "props": {
+          "text": "DET Rollerbeds"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 32,
+          "width": 196,
+          "x": 813.5,
+          "y": 506
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "textAlign": "center"
+          },
+          "text": "Semi - Auto Testing (Not moving TC)"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 32,
+          "width": 60,
+          "x": 734.82,
+          "y": 564
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "text": "Source:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 32,
+          "width": 109,
+          "x": 700.82,
+          "y": 609
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "text": "Destination 1:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\timport re\n\ttagpath_source \u003d self.getSibling(\"source\").props.text\n\ttagpath_dest \u003d self.getSibling(\"dest\").props.text\n\ttagpath_dest2 \u003d self.getSibling(\"dest_0\").props.text\n\t\n\tif not tagpath_source or not tagpath_dest:\n\t\tparams \u003d {\u0027message\u0027 : \u0027Source and Destination1 are required!\u0027}\n\t\tsystem.perspective.openPopup(\u0027messageBox\u0027, \u0027Popups/MessageBox\u0027, params)\n\t\treturn\n\t\t\n\tif tagpath_source \u003d\u003d tagpath_dest or (tagpath_dest2 and tagpath_source \u003d\u003d tagpath_dest2):\n\t\tparams \u003d {\u0027message\u0027 : \u0027Source and Destination Match, please select different source and destination!\u0027}\n\t\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027, params)\n\telse:\n\t\tSource \u003d Functions.getSplit(tagpath_source)\n\t\tDestination1 \u003d Functions.getSplit(tagpath_dest)\n\t\tDestination2 \u003d Functions.getSplit(tagpath_dest2) if tagpath_dest2 else \u0027\u0027\n\t\tPileNumber \u003d \u0027SEMI\u0027\n\t\tAGTC_ID \u003d self.getSibling(\"Dropdown_0\").props.value\n\t\tif AGTC_ID \u003d\u003d 3:\n\t\t\terrorparam \u003d {\u0027message\u0027: \u0027Can not add queue items to LSPF Transfer Cart!\u0027}\n\t\t\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027, errorparam)\n\t\telse:\n\t\t\tif AGTC_ID \u003d\u003d 1:#---\u003etake off before push into 3d VT\n\t\t\t\ttable \u003d\u0027PRESS_INFEED_TRANSFER_QUEUE\u0027#---\u003etake off before push into 3d VT\n\t\t\telif AGTC_ID \u003d\u003d 2:#take off on 3d vt\n\t\t\t\ttable \u003d\u0027PRESS_OUTFEED_TRANSFER_QUEUE\u0027#---\u003etake off before push into 3d VT\n\t\t\t\t\n\t\t\tparams \u003d {\u0027Source\u0027:Source, \u0027Destination1\u0027:Destination1, \u0027Destination2\u0027:Destination2, \u0027PileNumber\u0027:PileNumber, \u0027AGTC_ID\u0027: AGTC_ID, \u0027table\u0027:table}#take off table param on 3d vt\n\t\t\tsystem.db.runNamedQuery(\u0027Transfer_Carts/Queue/InsertTransferQueue\u0027, params)\n\t\t\tself.session.custom.Source \u003d \u0027\u0027\n\t\t\tself.session.custom.Destination1 \u003d \u0027\u0027\n\t\t\tself.session.custom.Destination2 \u003d \u0027\u0027\n\t\t\tpopparam \u003d {\u0027message\u0027: \u0027Added to queue!\u0027}\n\t\t\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027, popparam)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_3"
+        },
+        "position": {
+          "height": 60,
+          "rotate": {
+            "anchor": "50% 87%"
+          },
+          "width": 150,
+          "x": 863,
+          "y": 765.5
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "text": "Add to Queue"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.session.custom.Source \u003d \u0027\u0027\n\tself.session.custom.Destination1 \u003d \u0027\u0027\n\tself.session.custom.Destination2 \u003d \u0027\u0027"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_4"
+        },
+        "position": {
+          "height": 60,
+          "width": 150,
+          "x": 863,
+          "y": 692
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "text": "Reset Selections"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "source"
+        },
+        "position": {
+          "height": 32,
+          "width": 358,
+          "x": 802.7,
+          "y": 564
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "session.custom.Source"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "dest"
+        },
+        "position": {
+          "height": 32,
+          "width": 343,
+          "x": 817.7,
+          "y": 609
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "session.custom.Destination1"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "ToggleSwitch"
+        },
+        "position": {
+          "height": 36,
+          "width": 238,
+          "x": 818.828125,
+          "y": 454.98
+        },
+        "propConfig": {
+          "props.selected": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "text": "Enable Semi-Auto"
+          }
+        },
+        "type": "ia.input.toggle-switch"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\ttable \u003d self.getSibling(\"Table\")\n\tdata \u003d table.props.data\n\ttableid \u003d data.getValueAt(table.props.selection.selectedRow, \u0027Id\u0027)\n\tparams \u003d {\u0027Id\u0027 : tableid}\n\tpopparam \u003d {\u0027message\u0027: \u0027Removed from queue!\u0027}\n\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027, popparam)\n\tsystem.db.runNamedQuery(\u0027Transfer_Carts/Queue/Infeed_Manual_Delete\u0027, params)\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_5"
+        },
+        "position": {
+          "height": 43,
+          "width": 309,
+          "x": 138.3,
+          "y": 794.5
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "Delete Selection From Queue"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\ttable \u003d self.getSibling(\"Table_0\")\n\tdata \u003d table.props.data\n\ttableid \u003d data.getValueAt(table.props.selection.selectedRow, \u0027Id\u0027)\n\tparams \u003d {\u0027Id\u0027 : tableid}\n\tpopparam \u003d {\u0027message\u0027: \u0027Removed from queue!\u0027}\n\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027, popparam)\n\tsystem.db.runNamedQuery(\u0027Transfer_Carts/Queue/Outfeed_Manual_Delete\u0027, params)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_6"
+        },
+        "position": {
+          "height": 43,
+          "width": 309,
+          "x": 1253.015625,
+          "y": 794.5
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table_0.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "Delete Selection From Queue"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Dropdown_0"
+        },
+        "position": {
+          "height": 36,
+          "width": 136,
+          "x": 930.924,
+          "y": 16.0302
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Infeed TC",
+              "value": 1
+            },
+            {
+              "label": "Outfeed TC",
+              "value": 2
+            },
+            {
+              "label": "LSPF TC",
+              "value": 3
+            }
+          ],
+          "value": 1
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "Label_7"
+        },
+        "position": {
+          "height": 32,
+          "width": 219,
+          "x": 722.022690826416,
+          "y": 18.583570608520507
+        },
+        "props": {
+          "text": "Selected Transfer Cart View:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual"
+        },
+        "position": {
+          "height": 89,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": 68.07,
+          "y": 149.6475
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM1_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM1_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual_0"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": 396.712,
+          "y": 150.225
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM9_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM9_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual_1"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": 472.533,
+          "y": 150.109
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM11_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM11_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual_4"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": -1.9140000000000001,
+          "y": 302.988
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM2_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM2_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual_5"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "anchor": "50% 65%",
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": 212.205,
+          "y": 289.175
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM8_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM8_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual_7"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": 976.43,
+          "y": 302.788
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM24_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM24_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-24% 50%"
+          },
+          "width": 123,
+          "x": 1077.268125,
+          "y": 18.2878
+        },
+        "props": {
+          "text": "Actual Position:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "AP_INFEED"
+        },
+        "position": {
+          "height": 32,
+          "width": 123,
+          "x": 1200.568125,
+          "y": 17.8647
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Dropdown_0.props.value} \u003d 1"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]PressIF_TransferCart/TC_AGTC/TransComm/ActualPosition_PLCTOSM"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "AP_OUTFEED"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-10% 50%"
+          },
+          "width": 123,
+          "x": 1200.488125,
+          "y": 18.3417
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Dropdown_0.props.value} \u003d 2"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]PressOF_TransferCart/TC_AGTC/TransComm/ActualPosition_PLCTOSM"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "AP_LSPF"
+        },
+        "position": {
+          "height": 32,
+          "width": 123,
+          "x": 1200.178125,
+          "y": 17.7086
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Dropdown_0.props.value} \u003d 3"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]LSPF_TransferCart/TC_AGTC/TransComm/ActualPosition_PLCTOSM"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "diagnostics_if",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": false,
+                "showCloseIcon": true,
+                "title": "Infeed Transfer Cart Diagnostics",
+                "type": "open",
+                "viewPath": "Popups/Transfer_Cart_Diag_IF",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_1"
+        },
+        "position": {
+          "height": 43,
+          "rotate": {
+            "anchor": "50% 38%"
+          },
+          "width": 100,
+          "x": 1442.2,
+          "y": 12.436670608520508
+        },
+        "props": {
+          "image": {
+            "style": {
+              "backgroundColor": "#E02525"
+            }
+          },
+          "text": "INFEED TC Diagnostics"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\t# id selected\n\tcurrent_id \u003d self.getSibling(\"Table\").props.selection.data[0].Pos_id\n\t\n\t# ids list\n\tids_list \u003d self.getSibling(\"Table\").custom.ids\n\t\n\t# get id previous\n\tid_previous \u003d Functions.get_position(ids_list, current_id)\n\t\n\tif id_previous:\n\t\tnamedQuery \u003d \"Transfer_Carts/Queue/Update_Infeed_Queue_Position\"\n\t\t# first set -1 to current row to avoid duplicate id\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":current_id, \"new_id\":-1})\n\t\t# set current id to previous row\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":id_previous, \"new_id\":current_id})\n\t\t# now previous id is available to set in current row\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":-1, \"new_id\":id_previous})\n\t\t\n\t\t# refresh data table\n\t\tself.getSibling(\"Table\").refreshBinding(\"props.data\")\n\t\t\n\t\t# refresh row selected\n\t\tselected_row \u003d self.getSibling(\"Table\").props.selection.selectedRow\n\t\tself.getSibling(\"Table\").props.selection.selectedRow \u003d selected_row - 1"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_Up_infeed"
+        },
+        "position": {
+          "height": 40,
+          "width": 21,
+          "x": 676.140875,
+          "y": 463.96875
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/arrow_upward"
+            }
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\t# id selected\n\tcurrent_id \u003d self.getSibling(\"Table\").props.selection.data[0].Pos_id\n\t# ids list\n\tids_list \u003d self.getSibling(\"Table\").custom.ids\n\t\n\t# get id previous\n\tid_previous \u003d Functions.get_position(ids_list, current_id, \"down\")\n\t\n\tif id_previous:\n\t\tnamedQuery \u003d \"Transfer_Carts/Queue/Update_Infeed_Queue_Position\"\n\t\t# first set -1 to current row to avoid duplicate id\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":current_id, \"new_id\":-1})\n\t\t# set current id to previous row\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":id_previous, \"new_id\":current_id})\n\t\t# now previous id is available to set in current row\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":-1, \"new_id\":id_previous})\n\t\t\n\t\t# refresh data table\n\t\tself.getSibling(\"Table\").refreshBinding(\"props.data\")\n\t\t\n\t\t# refresh row selected\n\t\tselected_row \u003d self.getSibling(\"Table\").props.selection.selectedRow\n\t\tself.getSibling(\"Table\").props.selection.selectedRow \u003d selected_row + 1"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_Down_infeed"
+        },
+        "position": {
+          "height": 40,
+          "width": 21,
+          "x": 676.217875,
+          "y": 506
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/arrow_downward"
+            }
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\t# id selected\n\tcurrent_id \u003d self.getSibling(\"Table_0\").props.selection.data[0].Pos_id\n\t# ids list\n\tids_list \u003d self.getSibling(\"Table_0\").custom.ids\n\t\n\t# get id previous\n\tid_previous \u003d Functions.get_position(ids_list, current_id, \"down\")\n\t\n\tif id_previous:\n\t\tnamedQuery \u003d \"Transfer_Carts/Queue/Update_Outfeed_Queue_Position\"\n\t\t# first set -1 to current row to avoid duplicate id\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":current_id, \"new_id\":-1})\n\t\t# set current id to previous row\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":id_previous, \"new_id\":current_id})\n\t\t# now previous id is available to set in current row\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":-1, \"new_id\":id_previous})\n\t\t\n\t\t# refresh data table\n\t\tself.getSibling(\"Table_0\").refreshBinding(\"props.data\")\n\t\t\n\t\t# refresh row selected\n\t\tselected_row \u003d self.getSibling(\"Table_0\").props.selection.selectedRow\n\t\tself.getSibling(\"Table_0\").props.selection.selectedRow \u003d selected_row + 1"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_Down_Outfeed"
+        },
+        "position": {
+          "height": 40,
+          "width": 21,
+          "x": 1800.485625,
+          "y": 505
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table_0.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/arrow_downward"
+            }
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\t# id selected\n\tcurrent_id \u003d self.getSibling(\"Table_0\").props.selection.data[0].Pos_id\n\t\n\t# ids list\n\tids_list \u003d self.getSibling(\"Table_0\").custom.ids\n\t\n\t# get id previous\n\tid_previous \u003d Functions.get_position(ids_list, current_id)\n\t\n\tif id_previous:\n\t\tnamedQuery \u003d \"Transfer_Carts/Queue/Update_Outfeed_Queue_Position\"\n\t\t# first set -1 to current row to avoid duplicate id\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":current_id, \"new_id\":-1})\n\t\t# set current id to previous row\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":id_previous, \"new_id\":current_id})\n\t\t# now previous id is available to set in current row\n\t\tsystem.db.runNamedQuery(namedQuery, {\"old_id\":-1, \"new_id\":id_previous})\n\t\t\n\t\t# refresh data table\n\t\tself.getSibling(\"Table_0\").refreshBinding(\"props.data\")\n\t\t\n\t\t# refresh row selected\n\t\tselected_row \u003d self.getSibling(\"Table_0\").props.selection.selectedRow\n\t\tself.getSibling(\"Table_0\").props.selection.selectedRow \u003d selected_row - 1"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_Up_Outfeed"
+        },
+        "position": {
+          "height": 40,
+          "width": 21,
+          "x": 1800.4056249999999,
+          "y": 462.97
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table_0.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/arrow_upward"
+            }
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.getSibling(\"Table\").props.selection.selectedRow \u003d None\n\tself.getSibling(\"Table\").props.selection.selectedColumn \u003d None"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_Infeed_deselect"
+        },
+        "position": {
+          "height": 43,
+          "width": 107,
+          "x": 456.4535,
+          "y": 794
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "Deselect"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.getSibling(\"Table_0\").props.selection.selectedRow \u003d None\n\tself.getSibling(\"Table_0\").props.selection.selectedColumn \u003d None"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_Outfeed_deselect_0"
+        },
+        "position": {
+          "height": 43,
+          "width": 107,
+          "x": 1568.22,
+          "y": 794
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../Table_0.props.selection.selectedRow} !\u003d null"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "Deselect"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t#valor\u003dsystem.tag.readBlocking([\u0027[default]PressIF_TransferCart/TC_AGTC/TransComm/ParkLocation_SMTOPLC\u0027])[0].value\n\t#total\u003d(valor-15831.53)/435.26\n\t#self.getSibling(\"Infeed\").props.value \u003d total\n\t#system.perspective.print(total)\n\t\n\tparams \u003d {}\n\tresult \u003d system.db.runNamedQuery(\u0027Transfer_Carts/Park_Location/getInfeedEntry\u0027, params)\n\tif result.rowCount \u003e 0:\n\t\tinfeed_position \u003d result.getValueAt(0, \u0027position\u0027)\n\t\tformatted_position \u003d \"{:.0f}\".format(infeed_position)\n\t\tself.getSibling(\u0027infeedPark\u0027).props.text \u003d str(formatted_position)\n\t\tself.getSibling(\u0027Infeed\u0027).props.value \u003d (infeed_position - 15831.53) / 435.26\n\telse:\n\t\tself.getSibling(\u0027infeedPark\u0027).props.text \u003d \u0027No Data\u0027\n\t\t\n\tparams_o \u003d {}\n\tresult_o \u003d system.db.runNamedQuery(\u0027Transfer_Carts/Park_Location/getOutfeedEntry\u0027, params_o)\n\tif result_o.rowCount \u003e 0:\n\t\toutfeed_position \u003d result_o.getValueAt(0, \u0027position\u0027)\n\t\tformatted_o_position \u003d \"{:.0f}\".format(outfeed_position)\n\t\tself.getSibling(\u0027outfeedPark\u0027).props.text \u003d str(formatted_o_position)\n\t\tself.getSibling(\u0027Outfeed\u0027).props.value \u003d (outfeed_position - 16615) / 419.37\n\telse:\n\t\tself.getSibling(\u0027outfeedPark\u0027).props.text \u003d \u0027No Data\u0027"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "SetParkLocation",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 35,
+          "width": 201,
+          "x": 403.1735,
+          "y": 5.393755
+        },
+        "props": {
+          "label": {
+            "text": "Set park Location"
+          }
+        },
+        "type": "ia.input.toggle-switch"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "diagnostics_of",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": false,
+                "showCloseIcon": true,
+                "title": "Outfeed Transfer Cart Diagnostics",
+                "type": "open",
+                "viewPath": "Popups/Transfer_Cart_Diag_OF",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_7"
+        },
+        "position": {
+          "height": 43,
+          "rotate": {
+            "anchor": "50% 38%"
+          },
+          "width": 100,
+          "x": 1546.2,
+          "y": 12.983370608520508
+        },
+        "props": {
+          "image": {
+            "style": {
+              "backgroundColor": "#E02525"
+            }
+          },
+          "text": "OUTFEED TC Diagnostics"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "fSc3pOHv",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": false,
+                "showCloseIcon": true,
+                "title": "LSPF Transfer Cart Diagnostics",
+                "type": "open",
+                "viewPath": "Popups/Transfer_Cart_Diag",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_8"
+        },
+        "position": {
+          "height": 43,
+          "rotate": {
+            "anchor": "75% -69%"
+          },
+          "width": 100,
+          "x": 1649.2,
+          "y": 12.64
+        },
+        "props": {
+          "image": {
+            "style": {
+              "backgroundColor": "#E02525"
+            }
+          },
+          "text": "LSPF TC Diagnostics"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "ViewCanvas_0"
+        },
+        "position": {
+          "height": 34,
+          "width": 1810,
+          "x": -39.80250152587891,
+          "y": 270.97000915527343
+        },
+        "props": {
+          "instances": [
+            {
+              "bottom": "auto",
+              "height": "auto",
+              "left": "0px",
+              "position": "absolute",
+              "right": "auto",
+              "style": {
+                "backgroundColor": "#00000000",
+                "classes": ""
+              },
+              "top": "0px",
+              "viewParams": {
+                "color": "#00000000",
+                "name": ""
+              },
+              "viewPath": "Templates/slider1",
+              "width": "auto",
+              "zIndex": "auto"
+            },
+            {
+              "bottom": "auto",
+              "height": "auto",
+              "left": 150,
+              "position": "absolute",
+              "right": "auto",
+              "style": {
+                "classes": ""
+              },
+              "top": "0px",
+              "viewParams": {
+                "color": "#00000000",
+                "name": ""
+              },
+              "viewPath": "Templates/slider1",
+              "width": "auto",
+              "zIndex": "auto"
+            }
+          ],
+          "transitionSettings": {
+            "duration": "1s",
+            "timingFunction": "linear"
+          },
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.viewcanvas"
+      },
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "height": 36,
+          "width": 194,
+          "x": 409.19,
+          "y": 40.55
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "../SetParkLocation.props.selected"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Infeed",
+              "value": 0
+            },
+            {
+              "label": "Outfeed",
+              "value": 1
+            }
+          ],
+          "value": 0
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "infeedPark"
+        },
+        "position": {
+          "height": 32,
+          "width": 68,
+          "x": 537.02,
+          "y": 80.05
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../SetParkLocation.props.selected}\u0026\u0026{../Dropdown.props.value}\u003d0"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "24597"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "outfeedPark"
+        },
+        "position": {
+          "height": 32,
+          "width": 68,
+          "x": 537.02,
+          "y": 80.05
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../SetParkLocation.props.selected}\u0026\u0026{../Dropdown.props.value}\u003d1"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "51789"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "height": 33,
+          "width": 118,
+          "x": 414.188,
+          "y": 79.0469
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "../SetParkLocation.props.selected"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "text": "Current Park Loc.",
+          "textStyle": {
+            "fontSize": 14
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_14"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 74.99999999999999,
+          "x": 85.9771,
+          "y": 302.988
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA4_11",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_Backfill_RB/AGTC_FPA4_11",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label_6"
+        },
+        "position": {
+          "height": 32,
+          "width": 106,
+          "x": 700.82,
+          "y": 641
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "text": "Destination 2:"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "dest_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 343,
+          "x": 817.7,
+          "y": 641
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "session.custom.semi_auto"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "session.custom.Destination2"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_17"
+        },
+        "position": {
+          "height": 87.99999999999994,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 1724,
+          "y": 302
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA26_1",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_Auxiliary_Conveyors/AGTC_FPA26_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_22"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "anchor": "50% 60%",
+            "angle": 90
+          },
+          "width": 75,
+          "x": 1203.4,
+          "y": 140.5
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA25_2",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_3/AGTC_FPA25_2",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_P3_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual_3"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": 1136.72,
+          "y": 150.23
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM23_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM17_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_19"
+        },
+        "position": {
+          "height": 96,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 78,
+          "x": 1074,
+          "y": 147.5
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA21_2",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_3/AGTC_FPA21_2",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_P3_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_18"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "anchor": "50% 60%",
+            "angle": 90
+          },
+          "width": 75,
+          "x": 1002.69,
+          "y": 141.2
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA19_2",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_3/AGTC_FPA19_2",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_P3_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual_2"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": 936.51,
+          "y": 151.182
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM17_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM17_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_37"
+        },
+        "position": {
+          "height": 92,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 335.88,
+          "y": 148.72
+        },
+        "propConfig": {
+          "props.params.TextColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light",
+                      "output": "#000000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA7_17",
+            "RollerColor": "#A9A9A9",
+            "TagPath": "[default]Press_Infeed/AGTC_FPA7_17",
+            "pile": "8"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_3"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": 90
+          },
+          "width": 75,
+          "x": 823.87,
+          "y": 302.115
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPA20_2",
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Press_2/AGTC_FPA20_2",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_TC"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RollerBed_Manual_6"
+        },
+        "position": {
+          "height": 88,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 75,
+          "x": 741.12,
+          "y": 302.5933160156249
+        },
+        "props": {
+          "params": {
+            "DoorColor": "#986e22",
+            "Label": "FPM18_1",
+            "Loc_Occupied": false,
+            "RollerColor": "#D2E9E9",
+            "TagPath": "[default]Manual_Rollerbeds/FPM18_1",
+            "TextColor": "#000000",
+            "pile": "9"
+          },
+          "path": "Templates/RollerBed_Manual"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ViewCanvas"
+        },
+        "position": {
+          "height": 78,
+          "width": 1865,
+          "x": 1.8399999999999999,
+          "y": 231.66
+        },
+        "propConfig": {
+          "props.instances[0].left": {
+            "binding": {
+              "config": {
+                "expression": "({[default]PressIF_TransferCart/TC_AGTC/TransComm/ActualPosition_PLCTOSM}-16632)/24.15"
+              },
+              "type": "expr"
+            }
+          },
+          "props.instances[1].left": {
+            "binding": {
+              "config": {
+                "expression": "({[default]PressOF_TransferCart/TC_AGTC/TransComm/ActualPosition_PLCTOSM}-16632)/24.15"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "instances": [
+            {
+              "bottom": "auto",
+              "height": "auto",
+              "position": "absolute",
+              "right": "auto",
+              "style": {
+                "classes": ""
+              },
+              "top": "0px",
+              "viewParams": {
+                "DoorColor": "#986e22",
+                "Label": "Infeed",
+                "RollerColor": "#D2E9E9",
+                "TagPath": "[default]PressIF_TransferCart/TC_AGTC",
+                "TextColor": "#000000",
+                "pile": "9"
+              },
+              "viewPath": "Templates/RollerBed_TCCart",
+              "width": "auto",
+              "zIndex": "auto"
+            },
+            {
+              "bottom": "auto",
+              "height": "auto",
+              "position": "absolute",
+              "right": "auto",
+              "style": {
+                "classes": ""
+              },
+              "top": "0px",
+              "viewParams": {
+                "DoorColor": "#986e22",
+                "Label": "Outfeed",
+                "RollerColor": "#D2E9E9",
+                "TagPath": "[default]PressOF_TransferCart/TC_AGTC",
+                "TextColor": "#000000",
+                "pile": "9"
+              },
+              "viewPath": "Templates/RollerBed_TCCart",
+              "width": "auto",
+              "zIndex": "auto"
+            }
+          ],
+          "style": {
+            "borderStyle": "solid",
+            "borderWidth": 0.005
+          },
+          "transitionSettings": {
+            "duration": "5s",
+            "timingFunction": "linear"
+          }
+        },
+        "type": "ia.display.viewcanvas"
+      },
+      {
+        "events": {
+          "dom": {
+            "onMouseUp": {
+              "config": {
+                "script": "\tvalue\u003dself.props.value*24.115+15771\n\tparameters \u003d {\u0027position\u0027: value}\n\tsystem.db.runNamedQuery(\u0027Transfer_Carts/Park_Location/UpdateInfeedParkLocation\u0027, parameters)\n\t\n\t#For writing to label\n\tparams \u003d {}\n\tresult \u003d system.db.runNamedQuery(\u0027Transfer_Carts/Park_Location/getInfeedEntry\u0027, params)\n\tif result.rowCount \u003e 0:\n\t\tinfeed_position \u003d result.getValueAt(0, \u0027position\u0027)\n\t\tformatted_position \u003d \"{:.0f}\".format(infeed_position)\n\t\tself.getSibling(\u0027infeedPark\u0027).props.text \u003d str(formatted_position)\n\t\tsystem.tag.write(\u0027[default]PressIF_TransferCart/TC_AGTC/TransComm/ParkLocation_SMTOPLC\u0027, formatted_position)\n\telse:\n\t\tself.getSibling(\u0027infeedPark\u0027).props.text \u003d \u0027No Data\u0027"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Infeed"
+        },
+        "position": {
+          "height": 31,
+          "width": 1866,
+          "x": 1.28,
+          "y": 215.77
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../SetParkLocation.props.selected}\u0026\u0026{../Dropdown.props.value}\u003d0"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "handleColor": "#08EA21",
+          "labels": {
+            "interval": 10
+          },
+          "max": 1866,
+          "railColor": "#E62525",
+          "step": 0.5,
+          "trackColor": "#E62525",
+          "value": 20.13867537506318
+        },
+        "type": "ia.input.slider"
+      },
+      {
+        "events": {
+          "dom": {
+            "onMouseUp": {
+              "config": {
+                "script": "\tvalue\u003dself.props.value*24.115+15771\n\tparameters \u003d {\u0027position\u0027: value}\n\tsystem.db.runNamedQuery(\u0027Transfer_Carts/Park_Location/UpdateOutfeedParkLocation\u0027, parameters)\n\t\n\t#For writing to label\n\tparams \u003d {}\n\tresult \u003d system.db.runNamedQuery(\u0027Transfer_Carts/Park_Location/getOutfeedEntry\u0027, params)\n\tif result.rowCount \u003e 0:\n\t\toutfeed_position \u003d result.getValueAt(0, \u0027position\u0027)\n\t\tformatted_position \u003d \"{:.0f}\".format(outfeed_position)\n\t\tself.getSibling(\u0027outfeedPark\u0027).props.text \u003d str(formatted_position)\n\t\tsystem.tag.write(\u0027[default]PressOF_TransferCart/TC_AGTC/TransComm/ParkLocation_SMTOPLC\u0027, formatted_position)\n\telse:\n\t\tself.getSibling(\u0027outfeedPark\u0027).props.text \u003d \u0027No Data\u0027"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Outfeed"
+        },
+        "position": {
+          "height": 31,
+          "width": 1864,
+          "x": 1.61,
+          "y": 219.07
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{../SetParkLocation.props.selected}\u0026\u0026{../Dropdown.props.value}\u003d1"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "handleColor": "#08EA21",
+          "labels": {
+            "interval": 10
+          },
+          "max": 1876,
+          "railColor": "#E6D725",
+          "step": 0.1,
+          "trackColor": "#E6D725",
+          "value": 83.87382040322389
+        },
+        "type": "ia.input.slider"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onContextMenu": {
+          "config": {
+            "script": "\tpass"
+          },
+          "preventDefault": true,
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "contextMenu": {
+        "items": null
+      },
+      "name": "root"
+    },
+    "position": {
+      "x": 110.9375,
+      "y": 11.96875
+    },
+    "props": {
+      "pipes": [
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe",
+          "origin": {
+            "x": 1146,
+            "y": 288
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        },
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_0",
+          "origin": {
+            "x": 514,
+            "y": 101
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

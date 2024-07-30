@@ -1,0 +1,1341 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 876,
+      "width": 1970
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "props": {
+                  "text": "Ignition Perspective HMI Settings",
+                  "textStyle": {
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "105px"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "text": "Make Equipement Labels Static"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "ToggleSwitch"
+                },
+                "position": {
+                  "basis": "38px"
+                },
+                "propConfig": {
+                  "props.selected": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "session.custom.ShowLabels"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "type": "ia.input.toggle-switch"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "alignItems": "center",
+              "direction": "column",
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px"
+                },
+                "props": {
+                  "text": "Theme",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                    "textDecoration": "underline"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "36px"
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "session.props.theme"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "light",
+                      "value": "light"
+                    },
+                    {
+                      "label": "light-cool",
+                      "value": "light-cool"
+                    },
+                    {
+                      "label": "light-warm",
+                      "value": "light-warm"
+                    },
+                    {
+                      "label": "dark",
+                      "value": "dark"
+                    },
+                    {
+                      "label": "dark-cool",
+                      "value": "dark-cool"
+                    },
+                    {
+                      "label": "dark-warm",
+                      "value": "dark-warm"
+                    }
+                  ],
+                  "style": {
+                    "borderBottomLeftRadius": "7PX",
+                    "borderBottomRightRadius": "7PX",
+                    "borderTopLeftRadius": "7PX",
+                    "borderTopRightRadius": "7PX"
+                  }
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px"
+                },
+                "props": {
+                  "text": "Language",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                    "textDecoration": "underline"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\tif self.props.value \u003d\u003d \u0027English\u0027:\n\t\tself.session.props.locale \u003d \u0027en-US\u0027\n\telif self.props.value \u003d\u003d \u0027Español\u0027:\n\t\tself.session.props.locale \u003d \u0027es-US\u0027"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "36px"
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.locale"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": null,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "es-US",
+                              "output": "Español"
+                            },
+                            {
+                              "input": "en-US",
+                              "output": "English"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "English",
+                      "value": "English"
+                    },
+                    {
+                      "label": "Español",
+                      "value": "Español"
+                    }
+                  ],
+                  "style": {
+                    "borderBottomLeftRadius": "7PX",
+                    "borderBottomRightRadius": "7PX",
+                    "borderTopLeftRadius": "7PX",
+                    "borderTopRightRadius": "7PX"
+                  }
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_2"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px"
+                },
+                "props": {
+                  "text": "IF_TC Position Error Allowed  ",
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "TC_AGTC"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.enabled": {
+                    "binding": {
+                      "config": {
+                        "expression": "isAuthorized(true,\"Authenticated/Roles/Administrator\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "parameters": {
+                          "name": "{this.meta.name}"
+                        },
+                        "queryPath": "TC_Setttings/TC_Pos_error_Read"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tresult\u003dvalue.getValueAt(0,\u0027Semi_mode\u0027)\n\treturn result",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "query"
+                    },
+                    "onChange": {
+                      "enabled": null,
+                      "script": "\n\tparams \u003d{\n\t\u0027name\u0027:\u0027TC_AGTC\u0027,\n\t\u0027semi_mode\u0027: int(currentValue.value)\n\t}\n\tsystem.db.runNamedQuery(\u0027TC_Setttings/TC_Pos_error_Update\u0027,params)\n\tsystem.perspective.print(params)"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "backgroundColor": "#00000000",
+                    "borderBottomLeftRadius": "7px",
+                    "borderBottomRightRadius": "7px",
+                    "borderTopLeftRadius": "7px",
+                    "borderTopRightRadius": "7px"
+                  }
+                },
+                "type": "ia.input.numeric-entry-field"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "position": {
+                  "basis": "50px"
+                },
+                "props": {
+                  "text": "OF_TC Position Error Allowed  ",
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "TC_AGTC1"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "propConfig": {
+                  "props.enabled": {
+                    "binding": {
+                      "config": {
+                        "expression": "isAuthorized(true,\"Authenticated/Roles/Administrator\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "parameters": {
+                          "name": "{this.meta.name}"
+                        },
+                        "queryPath": "TC_Setttings/TC_Pos_error_Read"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tresult\u003dvalue.getValueAt(0,\u0027Semi_mode\u0027)\n\treturn result",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "query"
+                    },
+                    "onChange": {
+                      "enabled": null,
+                      "script": "\tparams \u003d{\n\t\t\u0027name\u0027:\u0027TC_AGTC1\u0027,\n\t\t\u0027semi_mode\u0027: int(currentValue.value)\n\t\t}\n\tsystem.db.runNamedQuery(\u0027TC_Setttings/TC_Pos_error_Update\u0027,params)\n\tsystem.perspective.print(params)"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "backgroundColor": "#00000000",
+                    "borderBottomLeftRadius": "7px",
+                    "borderBottomRightRadius": "7px",
+                    "borderTopLeftRadius": "7px",
+                    "borderTopRightRadius": "7px"
+                  }
+                },
+                "type": "ia.input.numeric-entry-field"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_3"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "alignItems": "center",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "336px",
+          "shrink": 2
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "light",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": null,
+                      "output": "#000000"
+                    },
+                    {
+                      "input": "light-cool",
+                      "output": "#FFFFFF"
+                    },
+                    {
+                      "input": "light-warm",
+                      "output": "#FFFFFF"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginLeft": "5px",
+            "marginRight": "5px",
+            "paddingLeft": "7px",
+            "paddingRight": "7px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "props": {
+                  "style": {
+                    "borderStyle": "solid",
+                    "fontWeight": "bold",
+                    "textAlign": "center"
+                  },
+                  "text": "Transfer Cart Settings",
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "33px"
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": 7,
+                "borderBottomRightRadius": 7,
+                "borderTopLeftRadius": 7,
+                "borderTopRightRadius": 7,
+                "paddingLeft": 1
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "EmbeddedView"
+                            },
+                            "position": {
+                              "basis": "320px",
+                              "grow": 1
+                            },
+                            "props": {
+                              "params": {
+                                "title": "Manual Rollerbed",
+                                "visible": false
+                              },
+                              "path": "Templates/Settings/autoTableHead"
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "56px"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "basis": "452px"
+                        },
+                        "propConfig": {
+                          "position.display": {
+                            "binding": {
+                              "config": {
+                                "path": "session.custom.display1"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "direction": "column",
+                          "elementPosition": {
+                            "basis": "100px",
+                            "grow": 0
+                          },
+                          "instances": [
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM1_1"
+                            },
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM2_1"
+                            },
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM8_1"
+                            },
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM9_1"
+                            },
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM11_1"
+                            },
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM17_1"
+                            },
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM18_1"
+                            },
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM23_1"
+                            },
+                            {
+                              "area": "Manual_Rollerbeds/",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPM24_1"
+                            }
+                          ],
+                          "path": "Templates/Settings/autoTableBody",
+                          "useDefaultViewWidth": false
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "512px"
+                    },
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "classes": "Settings/secondView",
+                        "marginTop": "12px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "EmbeddedView"
+                            },
+                            "position": {
+                              "basis": "320px",
+                              "grow": 1
+                            },
+                            "props": {
+                              "params": {
+                                "title": "Press Infeed Rollerbed"
+                              },
+                              "path": "Templates/Settings/autoTableHead"
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "56px"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "basis": "152px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "elementPosition": {
+                            "basis": "100px",
+                            "grow": 0
+                          },
+                          "instances": [
+                            {
+                              "area": "Press_Infeed/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA3_13"
+                            },
+                            {
+                              "area": "Press_Infeed/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA5_13"
+                            },
+                            {
+                              "area": "Press_Infeed/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA7_17"
+                            }
+                          ],
+                          "path": "Templates/Settings/autoTableBody",
+                          "useDefaultViewWidth": false
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "211px"
+                    },
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "classes": "Settings/secondView",
+                        "marginTop": "12px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-evenly"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "EmbeddedView"
+                            },
+                            "position": {
+                              "basis": "320px",
+                              "grow": 1
+                            },
+                            "props": {
+                              "params": {
+                                "title": "Press 2 Rollerbed"
+                              },
+                              "path": "Templates/Settings/autoTableHead"
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "56px"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "basis": "300px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "elementPosition": {
+                            "basis": "100px",
+                            "grow": 0
+                          },
+                          "instances": [
+                            {
+                              "area": "Press_2/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA10_1"
+                            },
+                            {
+                              "area": "Press_2/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA12_1"
+                            },
+                            {
+                              "area": "Press_2/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA14_1"
+                            },
+                            {
+                              "area": "Press_2/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA16_2"
+                            },
+                            {
+                              "area": "Press_2/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA20_2"
+                            },
+                            {
+                              "area": "Press_2/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA22_2"
+                            }
+                          ],
+                          "path": "Templates/Settings/autoTableBody",
+                          "useDefaultViewWidth": false
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "position": {
+                      "basis": "362px"
+                    },
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "classes": "Settings/secondView",
+                        "marginTop": "12px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "EmbeddedView"
+                            },
+                            "position": {
+                              "basis": "320px",
+                              "grow": 1
+                            },
+                            "props": {
+                              "params": {
+                                "title": "Press 3 Rollerbed "
+                              },
+                              "path": "Templates/Settings/autoTableHead"
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "56px"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "basis": "250px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "elementPosition": {
+                            "basis": "100px",
+                            "grow": 0
+                          },
+                          "instances": [
+                            {
+                              "area": "Press_3/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA13_1"
+                            },
+                            {
+                              "area": "Press_3/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA15_1"
+                            },
+                            {
+                              "area": "Press_3/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA19_2"
+                            },
+                            {
+                              "area": "Press_3/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA21_2"
+                            },
+                            {
+                              "area": "Press_3/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA25_2"
+                            }
+                          ],
+                          "path": "Templates/Settings/autoTableBody",
+                          "useDefaultViewWidth": false
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "312px"
+                    },
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "classes": "Settings/secondView",
+                        "marginTop": "12px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_2"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-around"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "EmbeddedView"
+                            },
+                            "position": {
+                              "basis": "320px",
+                              "grow": 1
+                            },
+                            "props": {
+                              "params": {
+                                "title": "Press Backfill Rollerbed "
+                              },
+                              "path": "Templates/Settings/autoTableHead"
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "56px"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "basis": "101px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "elementPosition": {
+                            "basis": "100px",
+                            "grow": 0
+                          },
+                          "instances": [
+                            {
+                              "area": "Press_Backfill_RB/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA4_11"
+                            },
+                            {
+                              "area": "Press_Backfill_RB/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA6_12"
+                            }
+                          ],
+                          "path": "Templates/Settings/autoTableBody",
+                          "useDefaultViewHeight": false,
+                          "useDefaultViewWidth": false
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "162px"
+                    },
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "classes": "Settings/secondView",
+                        "marginRight": 0,
+                        "marginTop": "12px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "EmbeddedView"
+                            },
+                            "position": {
+                              "basis": "320px",
+                              "grow": 1
+                            },
+                            "props": {
+                              "params": {
+                                "title": "Press Auxiliary Rollerbed"
+                              },
+                              "path": "Templates/Settings/autoTableHead"
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "56px"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "basis": "100px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "elementPosition": {
+                            "basis": "100px",
+                            "grow": 0
+                          },
+                          "instances": [
+                            {
+                              "area": "Press_Auxiliary_Conveyors/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA26_1"
+                            },
+                            {
+                              "area": "Press_Auxiliary_Conveyors/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "FPA28_1"
+                            }
+                          ],
+                          "path": "Templates/Settings/autoTableBody",
+                          "useDefaultViewWidth": false
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "162px"
+                    },
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "classes": "Settings/secondView",
+                        "marginRight": 0,
+                        "marginTop": "12px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "EmbeddedView"
+                            },
+                            "position": {
+                              "basis": "320px",
+                              "grow": 1
+                            },
+                            "props": {
+                              "params": {
+                                "title": "DET Rollerbed"
+                              },
+                              "path": "Templates/Settings/autoTableHead"
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "56px"
+                        },
+                        "props": {
+                          "style": {
+                            "marginRight": 0
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "basis": "50px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "elementPosition": {
+                            "basis": "100px",
+                            "grow": 0
+                          },
+                          "instances": [
+                            {
+                              "area": "DET_Rollerbeds/AGTC_",
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "name": "DETA27_1"
+                            }
+                          ],
+                          "path": "Templates/Settings/autoTableBody",
+                          "useDefaultViewWidth": false
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "position": {
+                      "basis": "112px"
+                    },
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "classes": "Settings/secondView",
+                        "marginRight": 0,
+                        "marginTop": "12px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-around"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "858px"
+            },
+            "props": {
+              "style": {
+                "paddingRight": 1
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "1524px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginLeft": "12px",
+            "marginTop": "15px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.backgroundColor": {
+        "binding": {
+          "config": {
+            "path": "session.props.theme"
+          },
+          "transforms": [
+            {
+              "fallback": "#000000",
+              "inputType": "scalar",
+              "mappings": [
+                {
+                  "input": "light",
+                  "output": "#FFFFFF"
+                },
+                {
+                  "input": null,
+                  "output": "#000000"
+                },
+                {
+                  "input": "light-cool",
+                  "output": "#FFFFFF"
+                },
+                {
+                  "input": "light-warm",
+                  "output": "#FFFFFF"
+                }
+              ],
+              "outputType": "color",
+              "type": "map"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "style": {
+        "paddingLeft": "20px",
+        "paddingRight": "20px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

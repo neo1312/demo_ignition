@@ -1,0 +1,289 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 260
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "MenuTree"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "backActionStyle": {
+            "classes": "Menu/All_Header"
+          },
+          "backActionText": "All Features",
+          "itemStyle": {
+            "classes": "Menu/Item"
+          },
+          "items": [
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "material/home"
+                },
+                "text": "Home"
+              },
+              "navIcon": {
+                "color": "",
+                "path": ""
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": "",
+                "fontWeight": "bold"
+              },
+              "target": "/",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Press Infeed"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/keyboard_arrow_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/press_infeed",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Press 2 \u0026 3"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/keyboard_arrow_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/press2_3",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Press Backfill"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/press_backfill",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "DET Rollerbeds"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/det_rollerbed",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "TRANSFER CART"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/transfer_cart",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Table Filtering"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/table_filtering",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "User Management"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/user",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Settings"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/settings",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "Historian"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/historian",
+              "visible": true
+            },
+            {
+              "backActionText": "",
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": ""
+                },
+                "text": "EVENT MONITOR"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {
+                "classes": ""
+              },
+              "target": "/EventMonitor",
+              "visible": true
+            }
+          ],
+          "style": {
+            "classes": "Menu/Menu"
+          }
+        },
+        "type": "ia.navigation.menutree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Menu/Menu"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

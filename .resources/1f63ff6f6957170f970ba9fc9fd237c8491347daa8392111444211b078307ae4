@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--neutral-100)",
+      "fontWeight": "bold",
+      "textAlign": "center"
+    }
+  }
+}

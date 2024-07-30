@@ -1,0 +1,186 @@
+{
+  "custom": {},
+  "params": {
+    "infeed": 1,
+    "infeedVal": "",
+    "key": "value",
+    "outfeed": 0,
+    "outfeedVal": "value"
+  },
+  "propConfig": {
+    "params.infeed": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.infeedVal": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.key": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.outfeed": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.outfeedVal": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 87,
+      "width": 270
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tif self.props.value \u003d\u003d 0:\n\t\tself.view.params.infeed \u003d 1\n\t\tself.view.params.outfeed \u003d 0\n\telif  self.props.value \u003d\u003d 1:\n\t\tself.view.params.infeed \u003d 0\n\t\tself.view.params.outfeed \u003d 1"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Infeed",
+              "value": 0
+            },
+            {
+              "label": "Outfeed",
+              "value": 1
+            }
+          ],
+          "textAlign": "center",
+          "value": 0
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "infeed"
+        },
+        "position": {
+          "basis": "30px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "../Dropdown.props.value"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": true
+                    },
+                    {
+                      "input": 1,
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.infeedVal"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "outfeed"
+        },
+        "position": {
+          "basis": "30px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "../Dropdown.props.value"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": false
+                    },
+                    {
+                      "input": 1,
+                      "output": true
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.outfeedVal"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": "Home"
+    },
+    "/EventMonitor": {
+      "title": "Event Monitor and Control",
+      "viewPath": "Monitor"
+    },
+    "/det_rollerbed": {
+      "title": "DET Rollerbeds",
+      "viewPath": "DET_Rollerbeds"
+    },
+    "/historian": {
+      "viewPath": "Historian"
+    },
+    "/lspf_tc_diagnostics": {
+      "viewPath": "Diagnostics/LSPF_TC_Diagnostics"
+    },
+    "/monitor": {
+      "title": "",
+      "viewPath": "Monitor"
+    },
+    "/press2_3": {
+      "title": "Press 2",
+      "viewPath": "Press2_3 (1)"
+    },
+    "/press_backfill": {
+      "title": "Press Backfill",
+      "viewPath": "Press_Backfill"
+    },
+    "/press_if_tc_diagnostics": {
+      "title": "",
+      "viewPath": "Diagnostics/Press_IF_TC_Diagnostics"
+    },
+    "/press_infeed": {
+      "title": "Press Infeed",
+      "viewPath": "Press_Infeed"
+    },
+    "/press_of_tc_diagnostics": {
+      "viewPath": "Diagnostics/Press_OF_TC_Diagnostics"
+    },
+    "/settings": {
+      "title": "Settings",
+      "viewPath": "Settings"
+    },
+    "/table_filtering": {
+      "title": "TableFiltering",
+      "viewPath": "TableFiltering"
+    },
+    "/transfer_cart": {
+      "title": "Transfer Cart",
+      "viewPath": "Transfer_Cart"
+    },
+    "/user": {
+      "title": "",
+      "viewPath": "UserManagement/UserManagement"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom",
+    "left": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 2100,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "menu",
+        "modal": false,
+        "resizable": false,
+        "show": "auto",
+        "size": 210,
+        "viewParams": {},
+        "viewPath": "Navigation/Dock"
+      }
+    ],
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 50,
+        "viewParams": {},
+        "viewPath": "Navigation/Navigation"
+      }
+    ]
+  }
+}

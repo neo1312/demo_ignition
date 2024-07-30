@@ -1,0 +1,246 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": ""
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 272,
+      "width": 233
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Spacer"
+        },
+        "position": {
+          "basis": "16px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "custom": {
+              "key": "value"
+            },
+            "meta": {
+              "name": "ToggleSwitch"
+            },
+            "position": {
+              "basis": "45px"
+            },
+            "props": {
+              "label": {
+                "text": "Set New Pile"
+              },
+              "style": {
+                "paddingLeft": 35
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "text": "New Pile Number",
+              "textStyle": {
+                "classes": "Text/Label"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "basis": "38px"
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "path": "../ToggleSwitch.props.selected"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "Spacer4"
+            },
+            "position": {
+              "basis": "90px"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tPileNum \u003d self.getSibling(\"TextField\").props.text\n\ttag \u003d self.view.params.TagPath + \u0027/Door/Door_0/PileNumber\u0027\n\tsystem.tag.write(tag, PileNum)\n\tsystem.perspective.closePopup(id \u003d \u0027Set_SkidDet\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "34px"
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "path": "../ToggleSwitch.props.selected"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.textStyle.cursor": {
+                "binding": {
+                  "config": {
+                    "path": "../ToggleSwitch.props.selected"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": false,
+                          "output": "not-allowed"
+                        },
+                        {
+                          "input": true,
+                          "output": "pointer"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "var(--neutral-60)",
+                "classes": "Text/Disabled"
+              },
+              "text": "Confirm \u0026 Close"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tsystem.perspective.closePopup(id \u003d \u0027Set_SkidDet\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "basis": "34px"
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "path": "../ToggleSwitch.props.selected"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.textStyle.cursor": {
+                "binding": {
+                  "config": {
+                    "path": "../ToggleSwitch.props.selected"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": false,
+                          "output": "not-allowed"
+                        },
+                        {
+                          "input": true,
+                          "output": "pointer"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "var(--qual-5)",
+                "classes": "Text/Disabled"
+              },
+              "text": "Cancel",
+              "textStyle": {
+                "classes": "Text/Disabled"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "PileChange"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

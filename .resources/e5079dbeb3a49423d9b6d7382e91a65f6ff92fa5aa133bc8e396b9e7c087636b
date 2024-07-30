@@ -1,0 +1,2 @@
+UPDATE EVENT_LOGS
+SET level = '0'

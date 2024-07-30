@@ -1,0 +1,559 @@
+{
+  "custom": {
+    "data": {
+      "$": [
+        "ds",
+        192,
+        1720975012976
+      ],
+      "$columns": [
+        {
+          "data": [
+            24
+          ],
+          "name": "Id",
+          "type": "Long"
+        },
+        {
+          "data": [
+            "FPA4_11"
+          ],
+          "name": "Name",
+          "type": "String"
+        },
+        {
+          "data": [
+            "Press_Backfill_RB"
+          ],
+          "name": "Area",
+          "type": "String"
+        },
+        {
+          "data": [
+            0
+          ],
+          "name": "Auto_available",
+          "type": "Long"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Semi_mode",
+          "type": "Long"
+        },
+        {
+          "data": [
+            1
+          ],
+          "name": "Active",
+          "type": "Long"
+        },
+        {
+          "data": [
+            1718714894000
+          ],
+          "name": "TimeStamp",
+          "type": "Date"
+        }
+      ]
+    }
+  },
+  "params": {
+    "area": "Press_Backfill_RB/AGTC_",
+    "name": "FPA4_11"
+  },
+  "propConfig": {
+    "custom.data": {
+      "binding": {
+        "config": {
+          "parameters": {
+            "name": "{view.params.name}"
+          },
+          "queryPath": "TC_Setttings/TC_Settings_Read"
+        },
+        "type": "query"
+      },
+      "persistent": true
+    },
+    "params.area": {
+      "binding": {
+        "config": {
+          "path": "view.custom.data"
+        },
+        "transforms": [
+          {
+            "code": "\tarea \u003d value.getValueAt(0,\u0027Area\u0027)\n\tif area !\u003d \"Manual_Rollerbeds\":\n\t\tdata \u003d str(area)+\u0027/AGTC_\u0027\n\telse:\n\t\tdata \u003d str(area)+\u0027/\u0027\n\t\n\treturn data",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.style.borderColor": {
+                "binding": {
+                  "config": {
+                    "path": "session.props.theme"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "#000000",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": "ligth",
+                          "output": "#AAAAAA"
+                        },
+                        {
+                          "input": "dark",
+                          "output": "#808080"
+                        },
+                        {
+                          "input": "light-cool",
+                          "output": "#AAAAAA"
+                        },
+                        {
+                          "input": "light-warm",
+                          "output": "#AAAAAA"
+                        },
+                        {
+                          "input": "dark-cool",
+                          "output": "#808080"
+                        },
+                        {
+                          "input": "dark-warm",
+                          "output": "#808080"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.name"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderStyle": "groove",
+                "borderWidth": ".05px"
+              },
+              "textStyle": {
+                "fontSize": 14,
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "104px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t"
+                  },
+                  "permissions": {
+                    "securityLevels": [
+                      {
+                        "children": [],
+                        "name": "Authenticated"
+                      }
+                    ],
+                    "type": "AllOf"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "NumericEntryField"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "isAuthorized(true,\"Authenticated/Roles/Administrator\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "area": "{view.params.area}",
+                      "name": "{view.params.name}"
+                    },
+                    "tagPath": "[default]{area}{name}/Coordinate/X_Location"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#00000000"
+              }
+            },
+            "type": "ia.input.numeric-entry-field"
+          },
+          {
+            "meta": {
+              "name": "NumericEntryField_0"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "isAuthorized(true,\"Authenticated/Roles/Administrator\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "area": "{view.params.area}",
+                      "name": "{view.params.name}"
+                    },
+                    "tagPath": "[default]{area}{name}/Coordinate/Y_Direction"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#00000000"
+              }
+            },
+            "type": "ia.input.numeric-entry-field"
+          },
+          {
+            "meta": {
+              "name": "NumericEntryField_1"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "isAuthorized(true,\"Authenticated/Roles/Administrator\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "area": "{view.params.area}",
+                      "name": "{view.params.name}"
+                    },
+                    "tagPath": "[default]{area}{name}/Coordinate/Y_Direction_Dest"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#00000000"
+              }
+            },
+            "type": "ia.input.numeric-entry-field"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "297px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tarea\u003dself.view.custom.data.getValueAt(0,\u0027Area\u0027)\n\tauto_available\u003dself.view.custom.data.getValueAt(0,\u0027Auto_available\u0027)\n\tsemi_mode\u003dself.view.custom.data.getValueAt(0,\u0027Semi_mode\u0027)\n\tactive\u003dself.view.custom.data.getValueAt(0,\u0027Active\u0027)\n\tname\u003dself.view.custom.data.getValueAt(0,\u0027Name\u0027)\n\t\n\tparams\u003d{\n\t\t\u0027area\u0027:area,\n\t\t\u0027auto_available\u0027:self.props.value,\n\t\t\u0027semi_mode\u0027:semi_mode,\n\t\t\u0027active\u0027:active,\n\t\t\u0027name\u0027:name\n\t\t\t}\n\tquery\u003d\u0027TC_Setttings/TC_Settings_Update\u0027\n\tsystem.db.runNamedQuery(query,params)\n"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "256px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.area"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003d\u003d \u0027Manual_Rollerbeds/\u0027:\n\t\tdata\u003dFalse\n\telse:\n\t\tdata\u003dTrue\n\treturn data",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "isAuthorized(true,\"Authenticated/Roles/Administrator\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "parameters": {
+                      "name": "{view.params.name}"
+                    },
+                    "queryPath": "TC_Setttings/TC_Settings_Read"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tdata\u003dvalue.getValueAt(0,\u0027Auto_available\u0027)\n\treturn data",
+                      "type": "script"
+                    },
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 1,
+                          "output": true
+                        },
+                        {
+                          "input": 0,
+                          "output": false
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "query"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Available",
+                  "value": true
+                },
+                {
+                  "label": "Unavailable",
+                  "value": false
+                }
+              ],
+              "style": {
+                "backgroundColor": "#00000000"
+              }
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tarea\u003dself.view.custom.data.getValueAt(0,\u0027Area\u0027)\n\tauto_available\u003dself.view.custom.data.getValueAt(0,\u0027Auto_available\u0027)\n\tsemi_mode\u003dself.view.custom.data.getValueAt(0,\u0027Semi_mode\u0027)\n\tactive\u003dself.view.custom.data.getValueAt(0,\u0027Active\u0027)\n\tname\u003dself.view.custom.data.getValueAt(0,\u0027Name\u0027)\n\t\t\n\tparams\u003d{\n\t\t\u0027area\u0027:area,\n\t\t\u0027auto_available\u0027:auto_available,\n\t\t\u0027semi_mode\u0027:self.props.value,\n\t\t\u0027active\u0027:active,\n\t\t\u0027name\u0027:name\n\t\t\t}\n\tquery\u003d\u0027TC_Setttings/TC_Settings_Update\u0027\n\tsystem.db.runNamedQuery(query,params)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Dropdown_0"
+            },
+            "position": {
+              "basis": "256px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "isAuthorized(true,\"Authenticated/Roles/Administrator\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "parameters": {
+                      "name": "{view.params.name}"
+                    },
+                    "queryPath": "TC_Setttings/TC_Settings_Read"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tdata\u003dvalue.getValueAt(0,\u0027Semi_mode\u0027)\n\treturn data",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "query"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Source",
+                  "value": 1
+                },
+                {
+                  "label": "Destination",
+                  "value": 2
+                },
+                {
+                  "label": "Both",
+                  "value": 3
+                }
+              ],
+              "placeholder": {
+                "color": "#C0C0C0"
+              },
+              "style": {
+                "backgroundColor": "#00000000"
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "399px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.backgroundColor": {
+        "binding": {
+          "config": {
+            "path": "session.props.theme"
+          },
+          "transforms": [
+            {
+              "fallback": "#000000",
+              "inputType": "scalar",
+              "mappings": [
+                {
+                  "input": "light",
+                  "output": "#FFFFFF"
+                },
+                {
+                  "input": null,
+                  "output": "#000000"
+                },
+                {
+                  "input": "light-cool",
+                  "output": "#FFFFFF"
+                },
+                {
+                  "input": "light-warm",
+                  "output": "#FFFFFF"
+                }
+              ],
+              "outputType": "color",
+              "type": "map"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "style": {
+        "borderTopStyle": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

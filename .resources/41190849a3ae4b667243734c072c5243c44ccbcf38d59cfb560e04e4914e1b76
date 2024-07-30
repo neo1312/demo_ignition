@@ -1,0 +1,86 @@
+/* Direct stylesheet authoring is an advanced feature. Knowledge of CSS required.*/
+
+.psc-labeltest {
+	opacity: 0;
+}
+.psc-labeltest:hover {
+	opacity: 1;
+}
+.psc-labeltest:active {
+	opacity: 1;
+}
+
+.psc-TC_DIAG_ACTIVE {
+	animation: flash 1s infinite;
+	color: #FFF
+}
+@keyframes flash {
+	0%, 49% {
+		background: red;
+	}
+	50%, 100% {
+		background: red
+	}
+}
+
+.psc-TC_DIAG_INACTIVE {
+	background: gray;
+	color: #FFF
+}
+.psc-TC_STATUS_ACTIVE{
+	animation: statflash 1s infinite;
+	color: #000
+}
+@keyframes statflash {
+	0%, 49% {
+		background: yellow;
+	}
+	50%, 100% {
+		background: yellow;
+	}
+}
+
+
+
+.psc-testing {
+	--border-angle: 0turn;
+	--main-bg: conic-gradient(from var(--border-angle), #213, #112 5%, #112 60%, #213 95%);
+	border: solid 2px transparent;
+	border-radius: 0.2em;
+	--gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #f03, #f03 99%, transparent);
+	background:
+	var(--main-bg) padding-box,
+	var(--gradient-border) border-box,
+	var(--main-bg) border-box;
+	background-position: center center;
+	animation: bg-spin 3s linear infinite;
+	color: #FFF;
+}
+.psc-testing:hover {
+}
+}
+@keyframes bg-spin {
+	to{
+		--border-angle: 1turn;
+	}
+}
+
+@property --border-angle {
+	syntax: "<angle>";
+	inherits: true;
+	initial-value: 0turn;
+}
+
+.psc-monitor-grid{
+  display: grid;
+  grid-template-columns: 30% 35% 35% ;
+  gap:10px;
+  grid-template-areas: 
+  "header			header 	header"
+  "loger 			loger 	loger"
+  "header-script    source 	dest"
+  "script-step  	source 	dest"
+  "chart-params 	source 	dest"
+  "btn 			source 	dest";
+  padding:20px;
+}

@@ -1,0 +1,798 @@
+{
+  "custom": {
+    "pile": null,
+    "settingsData": {
+      "$": [
+        "ds",
+        192,
+        1718643678037
+      ],
+      "$columns": [
+        {
+          "data": [],
+          "name": "Id",
+          "type": "Integer"
+        },
+        {
+          "data": [],
+          "name": "Name",
+          "type": "String"
+        },
+        {
+          "data": [],
+          "name": "Area",
+          "type": "String"
+        },
+        {
+          "data": [],
+          "name": "Auto_available",
+          "type": "Boolean"
+        },
+        {
+          "data": [],
+          "name": "Semi_mode",
+          "type": "Integer"
+        },
+        {
+          "data": [],
+          "name": "Active",
+          "type": "Boolean"
+        },
+        {
+          "data": [],
+          "name": "TimeStamp",
+          "type": "Date"
+        }
+      ]
+    }
+  },
+  "params": {
+    "DoorColor": "#986e22",
+    "Label": "FPA3_1",
+    "Loc_Occupied": false,
+    "RollerColor": "#D2E9E9",
+    "TagPath": "[default]Manual_Rollerbeds/FPM1_1",
+    "TextColor": "#000000",
+    "pile": "9"
+  },
+  "propConfig": {
+    "custom.pile": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.TagPath}"
+          },
+          "tagPath": "{1}/Door/Door_0/PileNumber"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.settingsData": {
+      "binding": {
+        "config": {
+          "parameters": {
+            "name": "{view.params.Label}"
+          },
+          "queryPath": "TC_Setttings/TC_Settings_Read"
+        },
+        "type": "query"
+      },
+      "persistent": true
+    },
+    "params.DoorColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Loc_Occupied": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.RollerColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TextColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.pile": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 76
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "drawing",
+          "tooltip": {
+            "text": "FPA3_1"
+          }
+        },
+        "position": {
+          "height": 45,
+          "width": 75,
+          "x": -0.535625,
+          "y": 21.0825
+        },
+        "propConfig": {
+          "props.elements[1].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[10].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[10].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[1].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[2].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[3].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[3].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[4].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[4].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[5].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[5].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[6].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[6].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[7].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[7].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[8].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[8].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[9].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[9].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.RollerColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[3].elements[0].fill.opacity": {
+            "binding": {
+              "config": {
+                "path": "view.params.Loc_Occupied"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": 1
+                    },
+                    {
+                      "input": false,
+                      "output": 0
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[3].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.DoorColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[3].elements[0].stroke.opacity": {
+            "binding": {
+              "config": {
+                "path": "view.params.Loc_Occupied"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": 1
+                    },
+                    {
+                      "input": false,
+                      "output": 0
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[3].elements[1].fill.opacity": {
+            "binding": {
+              "config": {
+                "path": "view.params.Loc_Occupied"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": 1
+                    },
+                    {
+                      "input": false,
+                      "output": 0
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[3].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.DoorColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[3].elements[1].stroke.opacity": {
+            "binding": {
+              "config": {
+                "path": "view.params.Loc_Occupied"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": 1
+                    },
+                    {
+                      "input": false,
+                      "output": 0
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "id": "defs1",
+              "name": "defs1",
+              "type": "defs"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M 8.0035683,1.1950375 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6",
+                      "name": "path6",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": 0.74217
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035683,2.9538378 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-7",
+                      "name": "path6-7",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035683,4.712638 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-7-3",
+                      "name": "path6-7-3",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035685,6.4714382 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-0",
+                      "name": "path6-0",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035685,8.2302385 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-7-7",
+                      "name": "path6-7-7",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035685,9.9890388 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-7-3-1",
+                      "name": "path6-7-3-1",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035686,11.747839 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-0-9",
+                      "name": "path6-0-9",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035686,13.506639 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-7-7-1",
+                      "name": "path6-7-7-1",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035686,15.26544 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-7-3-1-8",
+                      "name": "path6-7-3-1-8",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035688,17.02424 H 25.356723 v 0 h -0.160675",
+                      "fill": {},
+                      "id": "path6-0-9-2",
+                      "name": "path6-0-9-2",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 8.0035684,18.78304 H 25.356724 v 0 h -0.160676",
+                      "fill": {},
+                      "id": "path6-7-3-1-8-3",
+                      "name": "path6-7-3-1-8-3",
+                      "stroke": {
+                        "dasharray": "none",
+                        "opacity": "1",
+                        "width": "0.74217"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "id": "rollers",
+                  "name": "rollers",
+                  "transform": "matrix(0,0.71966527,-1,0,24.141701,-2.0961812)",
+                  "type": "group"
+                },
+                {
+                  "fill": {
+                    "paint": "#FFCA8A"
+                  },
+                  "height": "19.84375",
+                  "id": "ConveyorLeft",
+                  "name": "ConveyorLeft",
+                  "stroke": {
+                    "width": "0.0847358"
+                  },
+                  "transform": "rotate(90)",
+                  "type": "rect",
+                  "width": "2.6458333",
+                  "x": "1.0142218",
+                  "y": "-24.074537"
+                },
+                {
+                  "fill": {
+                    "paint": "#FFCA8A"
+                  },
+                  "height": "19.84375",
+                  "id": "ConveyorRight",
+                  "name": "ConveyorRight",
+                  "stroke": {
+                    "width": "0.084736"
+                  },
+                  "transform": "rotate(90)",
+                  "type": "rect",
+                  "width": "2.6458333",
+                  "x": "16.173502",
+                  "y": "-24.074537"
+                },
+                {
+                  "elements": [
+                    {
+                      "fill": {},
+                      "height": "17.280548",
+                      "id": "rect6",
+                      "name": "rect6",
+                      "stroke": {
+                        "dasharray": "none",
+                        "paint": "#000000",
+                        "width": "0.132292"
+                      },
+                      "type": "rect",
+                      "width": "9.0759182",
+                      "x": "9.6372337",
+                      "y": "1.281601"
+                    },
+                    {
+                      "fill": {},
+                      "height": "16.054459",
+                      "id": "rect6-2",
+                      "name": "rect6-2",
+                      "stroke": {
+                        "dasharray": "none",
+                        "paint": "#000000",
+                        "width": "0.118587"
+                      },
+                      "type": "rect",
+                      "width": "7.8498287",
+                      "x": "10.250278",
+                      "y": "1.8946458"
+                    }
+                  ],
+                  "id": "doors",
+                  "name": "doors",
+                  "transform": "rotate(90,14.170895,9.9036426)",
+                  "type": "group"
+                }
+              ],
+              "id": "layer1",
+              "name": "layer1",
+              "transform": "translate(-4.2307873,-1.0142218)",
+              "type": "group"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "style": {
+            "cursor": "grab"
+          },
+          "viewBox": "0 0 19.84375 17.805113"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 16,
+          "width": 70,
+          "x": 0.96,
+          "y": 38.15
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Loc_Occupied"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.pile"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "cursor": "grab"
+          },
+          "textStyle": {
+            "color": "#FFFFFF",
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 67,
+          "width": 74,
+          "x": 0.5,
+          "y": -0.01
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "session.custom.ShowLabels"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "labeltest"
+                    },
+                    {
+                      "input": true,
+                      "output": ""
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "alignVertical": "top",
+          "style": {},
+          "textStyle": {
+            "fontSize": 15,
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagpath \u003d self.view.params.TagPath\n\tsemi_auto\u003dself.session.custom.semi_auto\n\tSemi_mode\u003dself.view.custom.settingsData.getValueAt(0,\u0027Semi_mode\u0027)\n\t\t\n\tif semi_auto \u003d\u003d 1:\n\t\tif self.session.custom.Source \u003d\u003d \u0027\u0027:\n\t\t\tif Semi_mode \u003d\u003d 1 or Semi_mode \u003d\u003d 3:\n\t\t\t\tself.session.custom.Source \u003d tagpath\n\t\t\telse:\n\t\t\t\tparams\u003d{\u0027message\u0027:\u0027This is a Destination! Please Select a Source\u0027}\n\t\t\t\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027,params\u003dparams)\n\t\telif self.session.custom.Destination1 \u003d\u003d \u0027\u0027:\n\t\t\tif Semi_mode \u003d\u003d 2 or Semi_mode \u003d\u003d 3:\n\t\t\t\tif self.session.custom.Source \u003d\u003d tagpath:\n\t\t\t\t\tparams\u003d{\u0027message\u0027:\u0027Duplicated! Please Select another one\u0027}\n\t\t\t\t\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027,params\u003dparams)\n\t\t\t\telse:\n\t\t\t\t\tself.session.custom.Destination1 \u003d tagpath\n\t\t\telse:\n\t\t\t\tparams\u003d{\u0027message\u0027:\u0027This is a Source! Please Select a Destination\u0027}\n\t\t\t\tsystem.perspective.openPopup(\"messagebox\", \u0027Popups/MessageBox\u0027,params\u003dparams)\n\t\t\t\t\t\t\n\t\telif self.session.custom.Destination2 \u003d\u003d \u0027\u0027:\n\t\t\tif Semi_mode \u003d\u003d 2 or Semi_mode \u003d\u003d 3:\n\t\t\t\tif self.session.custom.Source \u003d\u003d tagpath or self.session.custom.Destination1 \u003d\u003d tagpath:\n\t\t\t\t\tparams\u003d{\u0027message\u0027:\u0027Duplicated! Please Select another one\u0027}\n\t\t\t\t\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027,params\u003dparams)\n\t\t\t\telse:\n\t\t\t\t\tself.session.custom.Destination2 \u003d tagpath\n\t\t\telse:\n\t\t\t\tparams\u003d{\u0027message\u0027:\u0027This is a Source! Please Select a Destination\u0027}\n\t\t\t\tsystem.perspective.openPopup(\"messagebox\", \u0027Popups/MessageBox\u0027,params\u003dparams)\n\t\telse:\n\t\t\tmessage \u003d \u0027Source and Destination are not empty! Please clear and try again!\u0027\n\t\t\tparams \u003d {\u0027message\u0027:message}\n\t\t\tsystem.perspective.openPopup(\u0027messagebox\u0027, \u0027Popups/MessageBox\u0027, params, \u0027MessageBox\u0027, showCloseIcon \u003d 0)"
+          },
+          "scope": "G",
+          "type": "script"
+        },
+        "onContextMenu": {
+          "config": {
+            "script": "\ttagpath \u003d self.view.params.TagPath\n\tparams \u003d {\u0027TagPath\u0027:tagpath}\n\tsystem.perspective.openPopup(\u0027Set_Skid\u0027, \u0027Popups/RB_RightClick_1\u0027, params, title \u003d \u0027Make Skid or Modify Pile Number!\u0027)"
+          },
+          "preventDefault": true,
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "contextMenu": {
+        "enabled": true
+      },
+      "name": "root",
+      "tooltip": {
+        "text": "FPA3_1"
+      }
+    },
+    "props": {
+      "aspectRatio": "75:68"
+    },
+    "type": "ia.container.coord"
+  }
+}

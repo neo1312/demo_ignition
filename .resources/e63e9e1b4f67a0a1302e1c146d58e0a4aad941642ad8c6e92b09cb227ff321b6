@@ -1,0 +1,99 @@
+{
+  "custom": {},
+  "params": {
+    "description": "on this step we are doing this...",
+    "name": "ST_1"
+  },
+  "propConfig": {
+    "params.description": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 42,
+      "width": 385
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Step_1"
+        },
+        "position": {
+          "basis": "100px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderColor": "#000000",
+            "borderStyle": "solid",
+            "borderWidth": 0.5
+          },
+          "textStyle": {
+            "color": "#000000",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "285px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.description"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderColor": "#000000",
+            "borderStyle": "solid",
+            "borderWidth": 0.5,
+            "paddingLeft": "5px"
+          },
+          "textStyle": {
+            "color": "#000000"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-evenly",
+      "style": {
+        "backgroundColor": "#D5D5D5"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

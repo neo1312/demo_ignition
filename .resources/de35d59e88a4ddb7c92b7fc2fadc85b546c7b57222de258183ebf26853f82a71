@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sfc zoom="1.0" canvas="20 20" execution-mode="Callable" hot-editable="false" persist-state="true" redundant-sync="false">
+	<step id="954bcabb-9139-4b3a-a63c-77d5ec94e216" location="5 1" name="__begin" factory-id="begin-step">
+<parameters>
+	<parameter><name>sourcepath</name><expression>'test'</expression></parameter>
+	<parameter><name>destinationpath</name><expression>'test'</expression></parameter>
+	<parameter><name>tc_path</name><expression>'test'</expression></parameter>
+	<parameter><name>cart</name><expression>'test'</expression></parameter>
+</parameters>
+	</step>
+	<step id="137ddc26-0f69-44f1-b295-b03c822444f5" location="5 2" name="S1" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	simul.move_to_source_car(chart.sourcepath,chart.cart)</start-script>
+	</step>
+	<step id="72932821-d473-446b-954a-a848593d6e0e" location="5 5" name="S2" factory-id="action-step">
+		<start-script>def onStart(chart, step): # WARNING: This resource was generated in a newer version of Ignition. For the best editing experience, recreate it in the current version.
+	simul.move_to_dest_car(chart.destinationpath,chart.cart)</start-script>
+	</step>
+	<step id="e2eddd81-c40e-404b-bdbc-a0f40dfa3dd9" location="5 7" name="__end1" factory-id="end-step">	</step>
+	<transition id="6b0c96f2-c01f-4997-aebd-f539f5f37f91" location="5 4">tag('[default]'+{cart}+'_TransferCart/TC_AGTC/LocOccupied_PLCTOSM')</transition>
+	<link id="aa93d698-6ae6-461b-b53b-2e81f48637a8" location="5 3"><up/><down/></link>
+	<link id="ed59bd42-2574-4644-a373-1cae212f8580" location="5 6"><up/><down/></link>
+
+</sfc>

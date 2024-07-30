@@ -1,0 +1,42 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 885,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PowerChart"
+        },
+        "position": {
+          "height": 849,
+          "width": 1892,
+          "x": 7,
+          "y": 14
+        },
+        "props": {
+          "interaction": {
+            "chartZoomLevel": 1,
+            "mode": "xTrace",
+            "rangeZoomLevel": 1,
+            "xTrace": {
+              "infoBox": {
+                "timeFormat": "HH:mm:ss:SSS"
+              }
+            }
+          }
+        },
+        "type": "ia.chart.powerchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

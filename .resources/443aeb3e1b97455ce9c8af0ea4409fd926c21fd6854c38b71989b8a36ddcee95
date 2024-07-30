@@ -1,0 +1,3 @@
+UPDATE PRESS_INFEED_TRANSFER_QUEUE
+SET Pos_id = :new_id
+WHERE Pos_id = :old_id

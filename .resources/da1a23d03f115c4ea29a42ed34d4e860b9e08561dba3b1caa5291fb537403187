@@ -1,0 +1,61 @@
+{
+  "custom": {},
+  "params": {
+    "color": "#F3AB17",
+    "name": "Infeed"
+  },
+  "propConfig": {
+    "params.color": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 26,
+      "width": 80
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

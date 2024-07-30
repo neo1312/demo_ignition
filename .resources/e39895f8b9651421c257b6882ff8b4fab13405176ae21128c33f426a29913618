@@ -1,0 +1,1 @@
+EXEC LogTags @TriggerGroup = :group, @IpAddress = :ip, @TagName = :name, @TagValue = :value

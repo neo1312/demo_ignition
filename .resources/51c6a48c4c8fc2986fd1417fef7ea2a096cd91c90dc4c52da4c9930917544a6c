@@ -1,0 +1,146 @@
+{
+  "custom": {},
+  "params": {
+    "description": "on this step we are doing this...",
+    "done": 1,
+    "name": "ST_1"
+  },
+  "propConfig": {
+    "params.description": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.done": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 42,
+      "width": 385
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Step_1"
+        },
+        "position": {
+          "basis": "47px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.description"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "basis": "100px"
+            },
+            "props": {
+              "color": "#3CE912",
+              "path": "material/check"
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "46px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.done"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.backgroundColor": {
+        "binding": {
+          "config": {
+            "path": "view.params.done"
+          },
+          "transforms": [
+            {
+              "fallback": "#D5D5D5",
+              "inputType": "scalar",
+              "mappings": [
+                {
+                  "input": 0,
+                  "output": "#FFFFFF"
+                },
+                {
+                  "input": 1,
+                  "output": "#8AFF8A"
+                }
+              ],
+              "outputType": "color",
+              "type": "map"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

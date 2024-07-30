@@ -1,0 +1,3 @@
+SELECT top 1 *
+FROM VT_TC_TRANSFERS
+order by TS DESC

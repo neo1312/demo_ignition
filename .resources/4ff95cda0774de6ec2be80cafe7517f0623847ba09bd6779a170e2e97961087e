@@ -1,0 +1,130 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 133,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "session.custom.Serial"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Text/Label"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "concat(\u0027From Pile: \u0027 + {session.custom.PileClicked})"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Text/Label",
+            "fontWeight": "normal"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tserial \u003d self.session.custom.Serial\n\tuser \u003d self.session.props.auth.user.userName\n\tparameters \u003d {\u0027Serial\u0027:serial, \u0027user\u0027:user}\n\t\n\tsystem.db.runNamedQuery(\u0027Press_Infeed/Delete_Door\u0027, parameters)\n\tsystem.perspective.sendMessage(\u0027update_table\u0027, scope\u003d\u0027page\u0027)\n\t\n\tsystem.perspective.closePopup(id \u003d \u0027Delete_Door\u0027)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--neutral-60)"
+          },
+          "text": "Delete \u0026 Close"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "Delete_Door",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "close",
+                "viewPath": "Popups/Delete_Door",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--qual-5)"
+          },
+          "text": "Cancel"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

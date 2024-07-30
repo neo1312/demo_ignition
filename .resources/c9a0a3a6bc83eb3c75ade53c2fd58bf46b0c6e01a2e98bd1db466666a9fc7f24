@@ -1,0 +1,1 @@
+EXEC P2P3_GetRollerbedLocationData @location = :location

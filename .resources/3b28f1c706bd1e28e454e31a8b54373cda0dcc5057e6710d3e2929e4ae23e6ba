@@ -1,0 +1,4 @@
+SELECT * 
+FROM SFC_STEP_LOGS
+ORDER BY time_stamp DESC;
+

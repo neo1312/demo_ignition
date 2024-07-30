@@ -1,0 +1,255 @@
+{
+  "custom": {},
+  "params": {
+    "height": 15,
+    "name": "",
+    "path": "[default]PressIF_TransferCart",
+    "width": 50
+  },
+  "propConfig": {
+    "params.height": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.width": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "props.defaultSize.height": {
+      "binding": {
+        "config": {
+          "path": "view.params.height"
+        },
+        "type": "property"
+      }
+    },
+    "props.defaultSize.width": {
+      "binding": {
+        "config": {
+          "path": "view.params.width"
+        },
+        "type": "property"
+      }
+    }
+  },
+  "props": {
+    "defaultSize": {}
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "sliderRestUnit2"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.elements[1].elements[0].elements[2].elements[0].text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "height": "60.159378",
+                  "id": "rect7",
+                  "name": "rect7",
+                  "type": "rect",
+                  "width": "110.74798",
+                  "x": "277.55359",
+                  "y": "378.73074"
+                }
+              ],
+              "id": "defs1",
+              "name": "defs1",
+              "type": "defs"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#ff0000"
+                      },
+                      "height": "11.733818",
+                      "id": "rect1",
+                      "name": "rect1",
+                      "stroke": {
+                        "paint": "#ff0000",
+                        "width": "0.238916"
+                      },
+                      "type": "rect",
+                      "width": "32.410839",
+                      "x": "78.532425",
+                      "y": "99.498344"
+                    },
+                    {
+                      "d": "m 78.552022,111.30406 16.185827,4.52193 16.185821,-4.52193",
+                      "fill": {
+                        "paint": "#ff0000"
+                      },
+                      "id": "path1",
+                      "name": "path1",
+                      "stroke": {
+                        "width": "0.137678"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "id": "tspan3",
+                          "name": "tspan3",
+                          "type": "tspan",
+                          "x": "277.55273",
+                          "y": "395.99231"
+                        }
+                      ],
+                      "fill": {
+                        "paint": "#ffffff"
+                      },
+                      "id": "text7",
+                      "name": "text7",
+                      "stroke": {
+                        "dasharray": "none",
+                        "paint": "#2b0000",
+                        "width": "0.261308"
+                      },
+                      "style": {
+                        "fontSize": "18.9206px",
+                        "shapeInside": "url(#rect7)",
+                        "whiteSpace": "pre"
+                      },
+                      "transform": "matrix(0.42371159,0,0,0.55535497,-37.945036,-111.54828)",
+                      "type": "text"
+                    },
+                    {
+                      "d": "M 34.52329,2.908665e-8 35.19048,50.887011 -9.212559,26.021309 Z",
+                      "fill": {
+                        "paint": "#ff0000"
+                      },
+                      "id": "path3",
+                      "name": "path3",
+                      "stroke": {
+                        "width": "0.264583"
+                      },
+                      "transform": "matrix(0.24844531,0,0,0.23528064,65.482157,99.378892)",
+                      "type": "path"
+                    },
+                    {
+                      "fill": {
+                        "paint": "#ff0000"
+                      },
+                      "height": "5.2657294",
+                      "id": "rect4-1",
+                      "name": "rect4-1",
+                      "stroke": {
+                        "width": "0.170425"
+                      },
+                      "type": "rect",
+                      "width": "4.5971098",
+                      "x": "74.020462",
+                      "y": "102.73239"
+                    },
+                    {
+                      "d": "M 34.52329,2.908665e-8 35.19048,50.887011 -9.212559,26.021309 Z",
+                      "fill": {
+                        "paint": "#ff0000"
+                      },
+                      "id": "path3-2",
+                      "name": "path3-2",
+                      "stroke": {
+                        "width": "0.264583"
+                      },
+                      "transform": "matrix(-0.24844531,0,0,-0.23528064,124.05834,111.35162)",
+                      "type": "path"
+                    },
+                    {
+                      "fill": {
+                        "paint": "#ff0000"
+                      },
+                      "height": "5.2657294",
+                      "id": "rect4-1-9",
+                      "name": "rect4-1-9",
+                      "stroke": {
+                        "width": "0.170425"
+                      },
+                      "transform": "scale(-1)",
+                      "type": "rect",
+                      "width": "4.5971098",
+                      "x": "-115.52004",
+                      "y": "-107.99813"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "id": "tspan5",
+                          "name": "tspan5",
+                          "stroke": {
+                            "width": "0.264583"
+                          },
+                          "type": "tspan",
+                          "x": "105.07442",
+                          "y": "108.36951"
+                        }
+                      ],
+                      "fill": {
+                        "paint": "#ff0000"
+                      },
+                      "id": "text5",
+                      "name": "text5",
+                      "stroke": {
+                        "width": "0.264583"
+                      },
+                      "style": {
+                        "fontSize": "9.87777px"
+                      },
+                      "type": "text",
+                      "x": "105.07442",
+                      "y": "108.36951"
+                    }
+                  ],
+                  "id": "g4",
+                  "name": "g4",
+                  "type": "group"
+                }
+              ],
+              "id": "layer1",
+              "name": "layer1",
+              "transform": "translate(-63.19334,-99.378886)",
+              "type": "group"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 63.153816 16.447104"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

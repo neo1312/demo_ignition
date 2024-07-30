@@ -1,0 +1,2 @@
+ALTER TABLE SFC_STEP_LOGS
+ADD step varchar(50);

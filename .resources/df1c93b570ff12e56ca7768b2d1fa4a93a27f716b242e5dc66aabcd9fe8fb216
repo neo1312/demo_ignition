@@ -1,0 +1,2 @@
+INSERT INTO {table_name} (parent, running_time, state, active_steps, instance_id, chart_path, start_date) 
+VALUES (:parent, :running_time, :state, :active_steps, :instance_id, :chart_path, :start_date)

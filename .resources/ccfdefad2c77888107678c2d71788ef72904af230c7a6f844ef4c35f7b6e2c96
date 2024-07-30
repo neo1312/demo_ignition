@@ -1,0 +1,112 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 142,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TextField"
+        },
+        "position": {
+          "basis": "41px"
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "--neutral-50",
+            "cursor": "text"
+          }
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "concat(\"To Pile:\" + {session.custom.PileClicked})"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tserial \u003d self.getSibling(\"TextField\").props.text\n\tpile \u003d self.session.custom.PileClicked\n\tuser \u003d self.session.props.auth.user.userName\n\tparams \u003d {\u0027Serial\u0027:serial, \u0027Pile\u0027:pile, \u0027user\u0027:user}\n\tsystem.db.runNamedQuery(\u0027Press_Infeed/Add_Door\u0027, params)\n\t\n\tsystem.perspective.sendMessage(\u0027update_table\u0027, scope\u003d\u0027page\u0027)\n\t\n\tsystem.perspective.closePopup(id \u003d \u0027Add_Door\u0027)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--neutral-60)"
+          },
+          "text": "Confirm \u0026 Close"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tsystem.perspective.closePopup(id \u003d \u0027Add_Door\u0027)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--qual-5)"
+          },
+          "text": "Cancel \u0026 Close"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

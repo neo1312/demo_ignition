@@ -1,0 +1,84 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 980,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Image"
+        },
+        "position": {
+          "basis": "1560px"
+        },
+        "propConfig": {
+          "props.tint.enabled": {
+            "binding": {
+              "config": {
+                "path": "session.props.theme"
+              },
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "dark",
+                      "output": false
+                    },
+                    {
+                      "input": "light",
+                      "output": true
+                    },
+                    {
+                      "input": "light-warm",
+                      "output": true
+                    },
+                    {
+                      "input": "light-cool",
+                      "output": true
+                    },
+                    {
+                      "input": "dark-warm",
+                      "output": false
+                    },
+                    {
+                      "input": "dark-cool",
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "fit": {
+            "mode": "contain"
+          },
+          "source": "/system/images/WhiteArchWoodDoors_transbg.png",
+          "tint": {
+            "color": "--neutral-100"
+          }
+        },
+        "type": "ia.display.image"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center",
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}
